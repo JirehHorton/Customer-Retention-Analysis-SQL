@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS olist_db;
 
 USE olist_db;							-- Switch to the new database
 
-CREATE TABLE customers(                 -- Customers Table
+CREATE TABLE customers (                 -- Customers Table
 	customer_id VARCHAR(60) PRIMARY KEY,
     customer_unique_id VARCHAR(60),
     customer_name VARCHAR(50),
