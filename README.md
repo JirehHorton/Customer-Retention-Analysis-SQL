@@ -1,5 +1,5 @@
 # Olist E-Commerce SQL Project
-![MY O-LIST DATABASE ERD DIAGRAM](https://github.com/user-attachments/assets/7167fd3a-3cf1-4031-ab09-8135bce600c1)
+
 
 ## Table of Contents
 - [Description](#description)
@@ -15,7 +15,7 @@
 ## Description
 Olist E-Commerce SQL Project
 
-This project demonstrates my ability to work with realistic e-commerce datasets using SQL. I built a relational database from multiple tables—-including customers, orders, products, and order_items—-and performed data cleaning, transformation, and analysis to answer business questions.
+This project demonstrates my ability to work with realistic e-commerce datasets using SQL. I built a relational database from multiple tables—including customers, orders, products, and order_items—and performed data cleaning, transformation, and analysis to answer business questions.
 
 Key highlights:
 - Designed primary and foreign key relationships across multiple tables.
