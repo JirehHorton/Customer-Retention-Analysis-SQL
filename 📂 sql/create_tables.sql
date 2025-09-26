@@ -29,8 +29,8 @@ ON orders(order_purchase_timestamp);
 CREATE TABLE products (                 -- Products Table
     product_id VARCHAR(60) PRIMARY KEY,
     product_category_name VARCHAR(100),
-    product_name_lenght INT,
-    product_description_lenght INT,
+    product_name_length INT,
+    product_description_length INT,
     product_photos_qty INT,
     product_weight_g INT,
     product_length_cm INT,
