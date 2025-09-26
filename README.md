@@ -1,7 +1,7 @@
 # Olist E-Commerce SQL Project
 
 ## Table of Contents
-- [Description](#description)
+- [Project Overview](#project-overview)
 - [Features](#features)
 - [Chart Titles with Descriptions](#chart-titles-with-descriptions)
 - [Technologies Used](#technologies-used)
@@ -11,7 +11,7 @@
 - [Author Info](#author-info)
 
 ---
-## Description
+## Project Overview
 Olist E-Commerce SQL Project
 
 This project demonstrates my ability to work with realistic e-commerce datasets using SQL. I built a relational database from multiple tables—including customers, orders, products, and order_items—and performed data cleaning, transformation, and analysis to answer business questions.
