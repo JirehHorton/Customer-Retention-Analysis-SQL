@@ -1,6 +1,5 @@
 # Olist E-Commerce SQL Project
 
-
 ## Table of Contents
 - [Description](#description)
 - [Features](#features)
