@@ -1,5 +1,4 @@
-# Olist Project
-Olist E-Commerce SQL Project
+# Olist E-Commerce SQL Project
 
 This project demonstrates my ability to work with realistic e-commerce datasets using SQL. I built a relational database from multiple tables—including customers, orders, products, and order_items—and performed data cleaning, transformation, and analysis to answer business questions.
 
