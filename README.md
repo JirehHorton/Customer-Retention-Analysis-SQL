@@ -1,25 +1,4 @@
 # Olist E-Commerce SQL Project
-
-This project demonstrates my ability to work with realistic e-commerce datasets using SQL. I built a relational database from multiple tables—including customers, orders, products, and order_items—and performed data cleaning, transformation, and analysis to answer business questions.
-
-Key highlights:
-
-Designed primary and foreign key relationships across multiple tables.
-
-Populated tables with realistic data (full dataset ~78,000 rows).
-
-Created sample subsets (~500–600 rows) for GitHub-friendly sharing.
-
-Explored insights such as customer ordering patterns, product sales, and inventory metrics.
-
-This project showcases skills in SQL, database design, and data manipulation—all directly applicable to business analytics and data engineering roles.
-Portfolio project using the Olist e-commerce dataset with SQL &amp; analysis.
-
-⚠️ Note: 
-This repo contains only a *sample dataset* (a few rows) for demonstration purposes.  
-The full Olist dataset (~100k+ rows) can be downloaded from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
-
-
 ![MY O-LIST DATABASE ERD DIAGRAM](https://github.com/user-attachments/assets/7167fd3a-3cf1-4031-ab09-8135bce600c1)
 
 ## Table of Contents
@@ -36,7 +15,7 @@ The full Olist dataset (~100k+ rows) can be downloaded from [Kaggle](https://www
 ## Description
 Olist E-Commerce SQL Project
 
-This project demonstrates my ability to work with realistic e-commerce datasets using SQL. I built a relational database from multiple tables—including customers, orders, products, and order_items—and performed data cleaning, transformation, and analysis to answer business questions.
+This project demonstrates my ability to work with realistic e-commerce datasets using SQL. I built a relational database from multiple tables—-including customers, orders, products, and order_items—-and performed data cleaning, transformation, and analysis to answer business questions.
 
 Key highlights:
 - Designed primary and foreign key relationships across multiple tables.
@@ -46,6 +25,8 @@ Key highlights:
 
 This project showcases skills in SQL, database design, and data manipulation—all directly applicable to business analytics and data engineering roles.
 Portfolio project using the Olist e-commerce dataset with SQL &amp; analysis.
+
+![MY O-LIST DATABASE ERD DIAGRAM](https://github.com/user-attachments/assets/7167fd3a-3cf1-4031-ab09-8135bce600c1)
 
 ⚠️ Note: 
 This repo contains only a *sample dataset* (a few rows) for demonstration purposes.  
