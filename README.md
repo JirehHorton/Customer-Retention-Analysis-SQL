@@ -4,7 +4,7 @@
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Technologies Used](#technologies-used)
-- [Query #1: New Customers Per Month](#query-#1:-new-customers-per-month)
+- [Query 1 New Customers Per Month](#query-1-new-customers-per-month)
 - [License](#license)
 - [Author Info](#author-info)
 
@@ -36,10 +36,29 @@ To make the project GitHub-friendly, I created smaller subsets of the full datas
 - order_items: ~150 rows
 
 These subsets were randomly sampled from the full dataset (~78,000 rows) to preserve the structure and relationships between tables while keeping file sizes manageable.
+
 ---
 
-## Query #1: New Customers Per Month
+## Query 1 New Customers Per Month
+```sql
+SELECT DATE_FORMAT(first_order, "%Y-%c") AS first_month,
+COUNT(DISTINCT customer_id) AS new_customers
+FROM ( 
+	SELECT c.customer_id,
+		   MIN(order_delivered_customer_date) AS first_order
+	FROM customers c
+	JOIN orders o 
+		ON c.customer_id = o.customer_id
+	WHERE order_status = 'delivered'
+	GROUP BY customer_id
+) AS sub
+GROUP BY first_month
+ORDER BY MIN(first_order) DESC;
+```
 <img width="260" height="408" alt="NEW CUSTOMERS PER MONTH SS" src="https://github.com/user-attachments/assets/dc3f1a8b-7835-4a0f-b8be-34aba19fafdb" />
+
+Insight:
+Customer growth seen
 
 ---
 
@@ -48,10 +67,6 @@ These subsets were randomly sampled from the full dataset (~78,000 rows) to pres
 - Data Visualization: Tableau
 - Random Name Generation: Python(faker)
 - Data Source: Brazilian E-Commerce Public Dataset by Olist
-
----
-## Usage
-- CAT
 
 ---
 ## License
