@@ -3,10 +3,8 @@
 
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Query #1: New Customers Per Month](#query-#1:-new-customers-per-month)
 - [License](#license)
 - [Author Info](#author-info)
 
@@ -38,23 +36,27 @@ To make the project GitHub-friendly, I created smaller subsets of the full datas
 - order_items: ~150 rows
 
 These subsets were randomly sampled from the full dataset (~78,000 rows) to preserve the structure and relationships between tables while keeping file sizes manageable.
+---
 
-## Features
-- CAT
+## Query #1: New Customers Per Month
+<img width="260" height="408" alt="NEW CUSTOMERS PER MONTH SS" src="https://github.com/user-attachments/assets/dc3f1a8b-7835-4a0f-b8be-34aba19fafdb" />
+
 ---
+
 ## Technologies Used
-- Data Visualization: MySQL
-- Data Source: Brazilian E-Commerce Public Dataset by Olist
+- Data Analysis: MySQL
+- Data Visualization: Tableau
 - Random Name Generation: Python(faker)
----
-## Installation
-- CAT
+- Data Source: Brazilian E-Commerce Public Dataset by Olist
+
 ---
 ## Usage
 - CAT
+
 ---
 ## License
 - This project is for educational and portfolio purposes only and is not licensed for commercial use. The data used in this project is public E-Commerce Data.
+
 ---
 ## Author Info
 - @LinkedIn - [@jirehhorton](https://www.linkedin.com/in/jirehhorton/)
