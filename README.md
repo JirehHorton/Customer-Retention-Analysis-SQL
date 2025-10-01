@@ -28,11 +28,16 @@ Note:
 This repo contains only a *sample dataset* (~500-600 rows) for demonstration purposes and the full dataset was used during analysis to generate insights.
 The full Olist dataset (~600k+ rows) can be downloaded from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
+---
+## Business Analysis Questions
+
+---
 ## DATABASE ERD DIAGRAM
 
-<img width="950" height="650" alt="O_LIST ERD DIAGRAM" src="https://github.com/user-attachments/assets/95898861-559f-44f0-ad34-ec1f46c0da99" />
-
 - Customers → Orders → Order_Items → Products
+- Schema: customers(PK) → orders(PK, FK→customers) → order_items(PK, FK→orders/products) ← products(PK)
+
+<img width="950" height="650" alt="O_LIST ERD DIAGRAM" src="https://github.com/user-attachments/assets/95898861-559f-44f0-ad34-ec1f46c0da99" />
 
 ---
 
@@ -58,7 +63,11 @@ ORDER BY MIN(first_order) DESC;
 
 **Insight:**
 
-Customer acquisition grew rapidly from 2016 through mid-2018, peaking at over 1,200 new customers in August 2018. However, after this peak, new customer counts collapsed to nearly zero by October 2018, which reflects either the end of the dataset collection period or a major change in customer acquisition strategy.
+- Customer acquisition grew rapidly from 2016 through mid-2018, peaking at over 1,200 new customers in August 2018. However, after this peak, new customer counts collapsed to nearly zero by October 2018, which reflects either the end of the dataset collection period or a major change in customer acquisition strategy.
+
+**Business Implication:**
+
+- Helps guide marketing campaigns and allocate resources effectively.
 
 </details> <details> <summary><strong>Query 2: Repeat Customers</strong></summary>
 
@@ -78,6 +87,11 @@ WHERE count_oi >= 2
 In this dataset, no customers placed more than one order. This indicates that:
 - The dataset may only include each customer’s first order, or
 - Repeat purchase behavior was not captured in the sample.
+
+**Business Implication:**
+
+Potential opportunities to implement loyalty programs or marketing campaigns to repeat customers
+  
 </details>
 
 ---
