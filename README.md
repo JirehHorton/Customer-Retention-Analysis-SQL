@@ -98,7 +98,7 @@ In this dataset, no customers placed more than one order. This indicates that:
 
 **Business Implication:**
 
-Potential opportunities to implement loyalty programs or marketing campaigns to repeat customers
+Potential opportunities to implement loyalty programs or marketing campaigns to repeat customers to encourage repeat purchases
   
 </details>
 
