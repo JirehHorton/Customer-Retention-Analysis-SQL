@@ -30,6 +30,14 @@ The full Olist dataset (~600k+ rows) can be downloaded from [Kaggle](https://www
 
 ---
 ## Business Analysis Questions
+-The project was driven by the following business questions:
+	- 1. How many new customers are acquired each month?
+	- 2. What percentage of customers make repeat purchases?
+	- 3. Which products generate the most revenue?
+	- 4. How does delivery time vary by region or product category?
+	- 5. What are the trends in order volume over time?
+
+These questions guided the data analysis and helped identify actionable insights for the e-commerce business.
 
 ---
 ## DATABASE ERD DIAGRAM
