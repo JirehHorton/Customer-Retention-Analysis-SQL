@@ -1,12 +1,15 @@
 # Olist E-Commerce SQL Project
-<img width="1400" height="450" alt="image" src="https://github.com/user-attachments/assets/202c3dd2-74e4-436a-8c24-8083542994a1" />
+<img width="1400" height="400" alt="image" src="https://github.com/user-attachments/assets/202c3dd2-74e4-436a-8c24-8083542994a1" />
 
 ## Table of Contents
 - [Project Overview](#project-overview)
+- [Business Analysis Questions](Business-Analysis-Questions)
+- [Queries](Queries)
+- [Key Takeaways/Business Insights](Key-Takeaways-/-Business-Insights)
 - [Technologies Used](#technologies-used)
-- [Query 1 New Customers Per Month](#query-1-new-customers-per-month)
 - [License](#license)
 - [Author Info](#author-info)
+
 
 ---
 ## Project Overview
@@ -21,25 +24,21 @@ Key highlights:
 This project showcases skills in SQL, database design, and data manipulation—all directly applicable to business analytics and data engineering roles.
 Portfolio project using the Olist e-commerce dataset with SQL &amp; analysis.
 
-![O-LIST DATABASE ERD DIAGRAM](https://github.com/user-attachments/assets/7167fd3a-3cf1-4031-ab09-8135bce600c1)
-
-⚠️ Note: 
+Note: 
 This repo contains only a *sample dataset* (~500-600 rows) for demonstration purposes and the full dataset was used during analysis to generate insights.
-The full Olist dataset (~600k+ rows) can be downloaded from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+The full Olist dataset (~600k+ rows) can be downloaded from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
-## Sample Data for GitHub
-To make the project GitHub-friendly, I created smaller subsets of the full dataset that are accessible ([here](https://github.com/JirehHorton/olist_project/tree/dcb8af4a4409156f6a013edc40643252729e2446/data)).
+## DATABASE ERD DIAGRAM
 
-- customers: ~150 rows
-- orders: ~150 rows
-- products: ~150 rows
-- order_items: ~150 rows
+<img width="950" height="650" alt="O_LIST ERD DIAGRAM" src="https://github.com/user-attachments/assets/95898861-559f-44f0-ad34-ec1f46c0da99" />
 
-These subsets were randomly sampled from the full dataset (~78,000 rows) to preserve the structure and relationships between tables while keeping file sizes manageable.
+- Customers → Orders → Order_Items → Products
 
 ---
 
-## Query 1 New Customers Per Month
+## Queries 
+<details> <summary><strong>Query 1: New Customers Per Month</strong></summary>
+	
 ```sql
 SELECT DATE_FORMAT(first_order, "%Y-%c") AS first_month,
 COUNT(DISTINCT customer_id) AS new_customers
@@ -57,8 +56,32 @@ ORDER BY MIN(first_order) DESC;
 ```
 <img width="260" height="408" alt="NEW CUSTOMERS PER MONTH SS" src="https://github.com/user-attachments/assets/dc3f1a8b-7835-4a0f-b8be-34aba19fafdb" />
 
-Insight:
-Customer growth seen
+**Insight:**
+
+Customer acquisition grew rapidly from 2016 through mid-2018, peaking at over 1,200 new customers in August 2018. However, after this peak, new customer counts collapsed to nearly zero by October 2018, which reflects either the end of the dataset collection period or a major change in customer acquisition strategy.
+
+</details> <details> <summary><strong>Query 2: Repeat Customers</strong></summary>
+
+```sql
+SELECT ROUND((COUNT(*) *100.0/ (SELECT COUNT(DISTINCT customer_id) FROM orders)),2)
+	AS repeat_customer_percentage
+FROM (
+	SELECT customer_id, COUNT(order_id) AS count_oi FROM ORDERS
+	GROUP BY customer_id) AS customer_orders
+WHERE count_oi >= 2
+;
+```
+
+<img width="207" height="50" alt="REPEAT CUSTOMER %" src="https://github.com/user-attachments/assets/91ebf279-8155-4211-87c2-23e95b5b10d8" />
+
+**Insight:**
+In this dataset, no customers placed more than one order. This indicates that:
+- The dataset may only include each customer’s first order, or
+- Repeat purchase behavior was not captured in the sample.
+</details>
+
+---
+## Key Takeaways/Business Insights
 
 ---
 
@@ -69,11 +92,23 @@ Customer growth seen
 - Data Source: Brazilian E-Commerce Public Dataset by Olist
 
 ---
+## Sample Data for GitHub
+To make the project GitHub-friendly, I created smaller subsets of the full dataset that are accessible ([here](https://github.com/JirehHorton/olist_project/tree/dcb8af4a4409156f6a013edc40643252729e2446/data)).
+
+- customers: ~150 rows
+- orders: ~150 rows
+- products: ~150 rows
+- order_items: ~150 rows
+
+These subsets were randomly sampled from the full dataset (~78,000 rows) to preserve the structure and relationships between tables while keeping file sizes manageable.
+
+---
 ## License
 - This project is for educational and portfolio purposes only and is not licensed for commercial use. The data used in this project is public E-Commerce Data.
 
 ---
 ## Author Info
+- Portfolio project by Jireh Horton
 - @LinkedIn - [@jirehhorton](https://www.linkedin.com/in/jirehhorton/)
 
 
