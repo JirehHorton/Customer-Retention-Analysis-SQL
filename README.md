@@ -5,7 +5,7 @@
 - [Project Overview](#project-overview)
 - [Business Analysis Questions](Business-Analysis-Questions)
 - [Queries](Queries)
-- [Key Takeaways & Business Insights](Key-Takeaways-&-Business-Insights)
+- [Key Takeaways Business Insights](Key-Takeaways-Business-Insights)
 - [Technologies Used](#technologies-used)
 - [License](#license)
 - [Author Info](#author-info)
@@ -82,7 +82,7 @@ In this dataset, no customers placed more than one order. This indicates that:
 
 ---
 
-## Key Takeaways & Business Insights
+## Key Takeaways Business Insights
 
 ---
 
