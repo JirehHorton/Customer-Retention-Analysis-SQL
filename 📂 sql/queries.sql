@@ -1,18 +1,18 @@
       -- QUERY #1 New Customers Per Month --
 
 SELECT DATE_FORMAT(first_order, "%Y-%c") AS first_month,
-COUNT(DISTINCT customer_id) AS new_customers
+COUNT(DISTINCT customer_unique_id) AS new_customers
 FROM ( 
-	SELECT c.customer_id,
+	SELECT c.customer_unique_id,
 		   MIN(order_delivered_customer_date) AS first_order
 	FROM customers c
-	JOIN orders o 
-		ON c.customer_id = o.customer_id
+	JOIN orders o
+		ON c.customer_unique_id = o.customer_unique_id
 	WHERE order_status = 'delivered'
-	GROUP BY customer_id
+	GROUP BY customer_unique_id
 ) AS sub
 GROUP BY first_month
-ORDER BY MIN(first_order) DESC;
+ORDER BY first_month DESC; 
 
        -- QUERY #2 Repeat Customers --
 SELECT ROUND((COUNT(*) *100.0/ (SELECT COUNT(DISTINCT customer_id) FROM orders)),2)
