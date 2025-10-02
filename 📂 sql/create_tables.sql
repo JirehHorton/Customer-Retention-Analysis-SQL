@@ -10,21 +10,25 @@ CREATE TABLE customers (                 -- Customers Table
     customer_zip_code_prefix INT,
     customer_city VARCHAR (35),
 	customer_state VARCHAR (3)
-  );
+);
 Create TABLE orders (                   -- Orders Table
 	order_id VARCHAR(60) PRIMARY KEY,
-	customer_id VARCHAR(60),
+	customer_unique_id VARCHAR(60),		-- main key used for analytics
+	customer_id VARCHAR(60),			-- original surrogate key
 	order_status VARCHAR(20), 
 	order_purchase_timestamp DATETIME, 
 	order_approved_at DATETIME, 
 	order_delivered_carrier_date DATETIME, 
 	order_delivered_customer_date DATETIME, 
 	order_estimated_delivery_date DATETIME,
-    FOREIGN KEY(customer_id) REFERENCES customers(customer_id)
 );
 
-CREATE INDEX purchase_date_idx          -- INDEXED(order_purchase_timestamp)  to speed up queries by date, like “orders per month”.
+CREATE INDEX purchase_date_idx          -- INDEX(order_purchase_timestamp)  to speed up queries by date, like “orders per month”.
 ON orders(order_purchase_timestamp);
+
+CREATE INDEX 
+	idx_orders_customer_unique_id		-- INDEX(customer_unique_id) for faster cohort/repeat analysis
+ON orders(customer_unique_id)
 
 CREATE TABLE products (                 -- Products Table
     product_id VARCHAR(60) PRIMARY KEY,
