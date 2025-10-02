@@ -54,24 +54,26 @@ These questions guided the data analysis and helped identify actionable insights
 	
 ```sql
 SELECT DATE_FORMAT(first_order, "%Y-%c") AS first_month,
-COUNT(DISTINCT customer_id) AS new_customers
+COUNT(DISTINCT customer_unique_id) AS new_customers
 FROM ( 
-	SELECT c.customer_id,
+	SELECT c.customer_unique_id,
 		   MIN(order_delivered_customer_date) AS first_order
 	FROM customers c
-	JOIN orders o 
-		ON c.customer_id = o.customer_id
+	JOIN orders o
+		ON c.customer_unique_id = o.customer_unique_id
 	WHERE order_status = 'delivered'
-	GROUP BY customer_id
+	GROUP BY customer_unique_id
 ) AS sub
 GROUP BY first_month
-ORDER BY MIN(first_order) DESC;
+ORDER BY first_month DESC;
 ```
-<img width="260" height="408" alt="NEW CUSTOMERS PER MONTH SS" src="https://github.com/user-attachments/assets/dc3f1a8b-7835-4a0f-b8be-34aba19fafdb" />
+
+<img width="256" height="402" alt="NEW CUSTOMERS PER MONTH SS" src="https://github.com/user-attachments/assets/0e4d7ede-dd1a-4959-bc72-28fb82aededa" />
+
 
 **Insight:**
 
-- Customer acquisition grew rapidly from 2016 through mid-2018, peaking at over 1,200 new customers in August 2018. However, after this peak, new customer counts collapsed to nearly zero by October 2018, which reflects either the end of the dataset collection period or a major change in customer acquisition strategy.
+- NEED TO UPDATE THIS 
 
 **Business Implication:**
 
