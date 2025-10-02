@@ -1,7 +1,7 @@
 							--  COPY AND PASTE THIS ENTIRE SCRIPT SECTION TO REPRODUCE THE DATABASE
 CREATE DATABASE IF NOT EXISTS olist_db;
 
-USE olist_db;							-- Switch to the new database
+USE olist_db;							 -- Switch to the new database
 
 CREATE TABLE customers (                 -- Customers Table
 	customer_id VARCHAR(60) PRIMARY KEY,
@@ -20,14 +20,13 @@ Create TABLE orders (                   -- Orders Table
 	order_approved_at DATETIME, 
 	order_delivered_carrier_date DATETIME, 
 	order_delivered_customer_date DATETIME, 
-	order_estimated_delivery_date DATETIME,
+	order_estimated_delivery_date DATETIME
 );
 
-CREATE INDEX purchase_date_idx          -- INDEX(order_purchase_timestamp)  to speed up queries by date, like “orders per month”.
+CREATE INDEX purchase_date_idx          		-- INDEX(order_purchase_timestamp)  to speed up queries by date, like “orders per month”.
 ON orders(order_purchase_timestamp);
 
-CREATE INDEX 
-	idx_orders_customer_unique_id		-- INDEX(customer_unique_id) for faster cohort/repeat analysis
+CREATE INDEX idx_orders_customer_unique_id		-- INDEX(customer_unique_id) for faster cohort/repeat analysis
 ON orders(customer_unique_id)
 
 CREATE TABLE products (                 -- Products Table
@@ -44,7 +43,7 @@ CREATE TABLE products (                 -- Products Table
 
 CREATE TABLE order_items (				 -- Order Items TABLE
     order_id VARCHAR(60),
-    order_item_id INT,                  -- the item number within the order
+    order_item_id INT,                   -- the item number within the order
     product_id VARCHAR(60),
     price DECIMAL(10,2),
     freight_value DECIMAL(10,2),
