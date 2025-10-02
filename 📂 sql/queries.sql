@@ -14,11 +14,12 @@ FROM (
 GROUP BY first_month
 ORDER BY first_month DESC; 
 
-       -- QUERY #2 Repeat Customers --
-SELECT ROUND((COUNT(*) *100.0/ (SELECT COUNT(DISTINCT customer_id) FROM orders)),2)
+       -- QUERY #2 Repeat Customer %  --
+
+SELECT ROUND((COUNT(*) *100.0/ (SELECT COUNT(DISTINCT customer_unique_id) FROM orders)),2)
 	AS repeat_customer_percentage
 FROM (
-	SELECT customer_id, COUNT(order_id) AS count_oi FROM ORDERS
-	GROUP BY customer_id) AS customer_orders
+	SELECT customer_unique_id, COUNT(order_id) AS count_oi FROM orders
+	GROUP BY customer_unique_id) AS customer_orders
 WHERE count_oi >= 2
 ;
