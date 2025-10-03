@@ -53,7 +53,7 @@ These questions guided the data analysis and helped identify actionable insights
 <details> <summary><strong>Query 1: New Customers Per Month</strong></summary>
 	
 ```sql
-SELECT DATE_FORMAT(first_order, "%Y-%c") AS first_month,
+SELECT DATE_FORMAT(first_order, "%Y-%m") AS first_month,
 COUNT(DISTINCT customer_unique_id) AS new_customers
 FROM ( 
 	SELECT c.customer_unique_id,
@@ -65,7 +65,7 @@ FROM (
 	GROUP BY customer_unique_id
 ) AS sub
 GROUP BY first_month
-ORDER BY first_month DESC;
+ORDER BY first_month DESC; 
 ```
 
 <img width="256" height="402" alt="NEW CUSTOMERS PER MONTH SS" src="https://github.com/user-attachments/assets/0e4d7ede-dd1a-4959-bc72-28fb82aededa" />
