@@ -1,6 +1,6 @@
       -- QUERY #1 New Customers Per Month --
 
-SELECT DATE_FORMAT(first_order, "%Y-%c") AS first_month,
+SELECT DATE_FORMAT(first_order, "%Y-%m") AS first_month,
 COUNT(DISTINCT customer_unique_id) AS new_customers
 FROM ( 
 	SELECT c.customer_unique_id,
