@@ -68,7 +68,7 @@ GROUP BY first_month
 ORDER BY first_month DESC; 
 ```
 
-<img width="256" height="402" alt="NEW CUSTOMERS PER MONTH SS" src="https://github.com/user-attachments/assets/0e4d7ede-dd1a-4959-bc72-28fb82aededa" />
+<img width="255" height="402" alt="NEW CUSTOMERS PER MONTH" src="https://github.com/user-attachments/assets/be01972e-f750-499e-949a-6a38a87d2824" />
 
 
 **Insight:**
