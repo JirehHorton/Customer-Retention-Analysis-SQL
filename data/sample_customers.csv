@@ -1,0 +1,151 @@
+customer_id,customer_unique_id,customer_name,customer_zip_code_prefix,customer_city,customer_state
+001051abfcfdbed9f87b4266213a5df1,4ea5df5937187bd3176aee08d4782104,"John Swanson",2251,"sao paulo",SP
+0013280441d86a4f7a8006efdaf1b0fe,06caeba6db23a17bf9bcb3846b768387,"Maria Carter",5409,"sao paulo",SP
+00146ad30454993879adaa91c518f68c,5616f75d22507069b5383854a1d8c414,"Brandy Warren",31060,"belo horizonte",MG
+0015bc9fd2d5395446143e8b215d7c75,490c854539b21598cfbbac518ca25788,"Traci Garcia",12233,"sao jose dos campos",SP
+002348c1099e3229276c8ad7d4ddc702,934c19eeef04da89928f995df85cf3f8,"Joshua Barker",13295,itupeva,SP
+002450e9ea44cb90b8a07ba0b197e149,5e718c3c3061694c7b7e31d183f88a45,"Katherine Ray",35145,sobralia,MG
+0026955706fd4e2fa997f3f4c18d485a,47b6bc410befb9fa30a4c029dba944e5,"Andrea Arnold",2926,"sao paulo",SP
+0028ff36263a86bf679df7c863a0a0ba,0659763dba9821af49728668716e1084,"Michael Hamilton",28895,"rio das ostras",RJ
+002b24cb2cd0c3e575040dbd278885e3,f422964d43fc7ecdc3e51443af0705f9,"Amanda Vazquez",79117,"campo grande",MS
+002f90a6eb386bc43bc9ba200db31a89,bd3001c423ef9a9092b0a5158f1ccdf6,"Anthony Willis",4929,"sao paulo",SP
+002ff70a5285669011090c077ef929af,9bca65d60b3dffad98eafa3c50101fad,"John Guerrero",80730,curitiba,PR
+00302a0b99783c3d1d1e81c616e321e8,1b9872e035e88fc720548cc74a815a46,"Linda Johnson",22210,"rio de janeiro",RJ
+00314f95a054231742e3c5396b333b88,aaf46bd4e1ad43275a5a20bd485e7661,"Nancy Stanley",11440,guaruja,SP
+003bdf7fd8312f9d14a4b979f3747334,12d1cda209613cd60b9d242181be7077,"Tara Macdonald",3813,"sao paulo",SP
+00426311a53f3c052943c88b692a3be2,aed838b04abeb2fb94566d0a073bd718,"David Owens",4551,"sao paulo",SP
+0042d04ee8231b36dcb29aac213f5db4,9e5f9798a71d8f5ec3020a5500d70430,"Joy Sparks",84130,palmeira,PR
+004d41e9bf012c669db1a257888d85a2,5e35d686648f9f99fd1f90161d3db93c,"Michelle Weaver",66087,belem,PA
+0050b4dd994efa94b2cd3210e4cecf32,e5ab9d9cc98f8d5befc51f952a44c87b,"Alicia Bell MD",37026,varginha,MG
+0063913c2f1878cc471de963dc0571c4,3c4abb94aa82c0be6a86af95be2ca5bf,"David Taylor DDS",13178,sumare,SP
+00660e817a39486a37c26b071d0741f8,587547bf360f33a6466aac68caecdde3,"Paul Lewis",8010,"sao paulo",SP
+0068b31b2dd799c334e7b6283333f84a,d7104510a89e6fb895b8104650173787,"Nicholas Kemp",28610,"nova friburgo",RJ
+006e35001c6c8c65ad4b20a8925d2b9f,77e0a2e2281e2a533eb62268371a4bc6,"Amy Marquez",83420,"quatro barras",PR
+006fffc5b0accd275de3e3a4b6d0832d,19cb50ca8ff9afe19ce39c5d9562f3bd,"Michael Evans",68371,altamira,PA
+007d1c8a4fe2a7d4233d5ad3ea74a29b,68652e69a77dec3f573ef0135541f6b5,"Nicole Ford",30260,"belo horizonte",MG
+0088395699ea0fcd459bfbef084997db,ffe254cc039740e17dd15a5305035928,"Trevor Murphy",37640,extrema,MG
+0089c34393989276de67746531e0df21,320388520e5f7afe7c97489ea2732796,"Steven Cline",6397,carapicuiba,SP
+0097c5abeb126a90646370f4a1cf3d93,4c1cacfc081ddc8593a27c9d3c88be49,"Brian Maxwell",97700,santiago,RS
+009ac0aeacb7e5c368452976385b7903,2d6f0bccd75dcbf570a1afe61eeb03a1,"Paula Diaz",6730,"vargem grande paulista",SP
+009bd844996868ab5166ade7dd9ab471,63df52c362d4b7183bb6a463452a8183,"Mark Moore",13076,campinas,SP
+009e30667771830117017cf8581b98a5,6a1250106d0de8395377553e4dd2b5fc,"Mrs. Katie Dixon",30880,"belo horizonte",MG
+00a16acd591b4bb112f2e94c7d2f9936,873e5a11673ea73e58db17af95546fc5,"Tanner Fisher",28941,"sao pedro da aldeia",RJ
+00a2277d94755da60c916bab098b9b49,9a4874151836dd0388acb83657ab7367,"Karen Rose",11035,santos,SP
+00a39528c677a55852f57235f988b837,9f67d6145893e41e7ada2e646b84f658,"Alexandra Phillips",18112,votorantim,SP
+00a6e2753fc2652cb87386ffbf5792b2,3abdf4f27efce96f8573a88343a4084e,"Katherine Reynolds",4944,"sao paulo",SP
+00acc750f0c2bda99b95c4043ff1e662,308eed157c50c58cd2d795eb5f1e096a,"Marcus Brennan",36061,"juiz de fora",MG
+00b366712a38454d2e62c9d2509d0623,271850b8783a2378c477328f60413b47,"Richard Herman",3476,"sao paulo",SP
+00b5072ef1192bc4d02e1d6264317bb0,86e5bace0b99ae394e73ee02a28fa10e,"Nancy Murphy",14883,jaboticabal,SP
+00b96a156e6827442e5ec7c620a39d24,41b75ed52acfa208903915c459a5e3fd,"Richard Cooper",31010,"belo horizonte",MG
+00bae1a0d3566c3af0c3c67fd2204935,66d201c13937598dd4e036788a10a203,"Elizabeth Graham",38465,arapora,MG
+00bb2dd15521a8a428bb530b4cabb403,0cbd5dfde4c06bbe2960d2c0c95e5e7d,"Susan Caldwell",14055,"ribeirao preto",SP
+00bf77539bad79ed21c55cdea4375985,6e066424e17b2da4b735194531fb99a6,"Holly Miller",88070,florianopolis,SC
+00c7c6f2aaf86b1a5a386b103b67b218,3edc2805e049db7e556130362bb517fc,"Kenneth Jenkins",13141,paulinia,SP
+00cd48b2051a1518d6d33ffd01dbfcb6,2f683d2b8640f8988ad9ca6295c03a50,"Amy Gross",2130,"sao paulo",SP
+00d7e038b53f4b3ed3036d2d016e51c4,61c5df1c0ba751e67109d3a9448ba372,"Jaime Garcia",7713,caieiras,SP
+00d8b72b2807894a9e5c690179132819,f87567b082c73dd2c953001b14ddd739,"Marissa Mckee",8588,itaquaquecetuba,SP
+00dcc20224e6a230aa9f7ff8fb6f29f8,7a91ff7dd6e77ba0f5ce7698cd7ba73b,"Nicole Johnson",4857,"sao paulo",SP
+00e200fe66bc8553bd83681887d6176f,fc5e5fe0a1c88aebef8f551bc84abd9c,"Robert Wheeler",69020,manaus,AM
+00e5b2926b61c618f32e26a8683d84c7,75e750a6279d55f7137bb9e9bb8662cf,"Erin Bell",80430,curitiba,PR
+00e6ef8a68edd7a3d2221bcf18656b7e,9294c7088c7a37baed4923945669de99,"Kelly Ortega",99145,coxilha,RS
+00ec3ab027d83e9b77d525b2e6b823e7,0d36922553ab8b00e3d5acd0d1ea0abb,"Erin Valencia",5323,"sao paulo",SP
+00ed8dde25f27c50ed32e0c4f1f8e76e,0326cb53e00b3f47e00db8263b66b32c,"Diane Flores",86010,londrina,PR
+00ee00c99d468f838abf1d6d7044b2aa,6287730d8268264d1ac736b64304c632,"Kimberly Ware",6709,cotia,SP
+00efd0bb67f3af4d73269668a6cc8b49,b63a0410273c4fbd9c54a639ce8bfdf8,"Christopher Payne",12227,"sao jose dos campos",SP
+00f73459a4d3be97ff307dc869da0aa9,f0e721656838e4d20a956242308007c7,"Lisa Hernandez",4571,"sao paulo",SP
+00ffbb23812bc76062322afd86d8cbf7,3ebb2a0fd558dba46f61dbaa6ecbda79,"Edward Powers",6145,osasco,SP
+01077b7579fd4c86971c6598bd550ee5,1a0d8ab950a7d9632115973d98b648e2,"Linda Lang",14401,franca,SP
+0107d0717619fc7e17ba5fdd7c9aad36,9224cb2cd931f94531d064137e8a25c6,"Devin Jones",97502,uruguaiana,RS
+01095519ab759274152540845a1d2004,de94babd284639522797831b81b3d239,"Nicole Ferguson",13334,indaiatuba,SP
+010be179fab38706ae5cf77170b038e3,5e7e0be1ac6b95219cd8a74b42881f19,"Melissa White",28613,"nova friburgo",RJ
+010ebb5ce5da9367a59959153f083968,5b7743d8f930a9dd5cfdb503aa8e31dc,"Tina Carroll",12215,"sao jose dos campos",SP
+010f3c6e21051748f72f762b9a7cb85d,52d40ed525892e7b31fc34aa750419c9,"Brendan Evans",7054,guarulhos,SP
+011671897080a38fa57f3c190a310d49,2abd0f22de522dbcc7adc9ba8982e406,"Alexander Lopez",7176,guarulhos,SP
+011a899e735ec86f00f26089cdae09cf,f0d1cc425dc6608c2b319b981a025cbc,"Walter Chang",4890,"sao paulo",SP
+011aa301cac8da4d01db88c3180a4058,e44110c2ff342e5bbda6c2224d94bbe6,"Lindsay Gomez",1202,"sao paulo",SP
+01214c5f31d06b6da030e5825b431446,9cd889bbd0b3e67db9d57ff266c44d53,"Jessica Forbes",4739,"sao paulo",SP
+0122f471f8b583b4b8262a9ba5870e0e,b8e48b22c967fa2ab9a6a4146329af11,"Dustin Goodman",58780,itaporanga,PB
+012413f25e1a3f143b2001198e916594,99251d77284980383662133057fe855b,"Adam Ingram",13880,"vargem grande do sul",SP
+0124a56e33d9d3da6b8340d2153f60a5,a055c63f6e34861892f05da20782859e,"Michelle Wright",38031,uberaba,MG
+012c207234cf4e33fd21cc9bbcb2d1a3,597d4977a08cb545d03b78f118ef0a08,"Daniel Young",3303,"sao paulo",SP
+0130b37ed963c4a595792582025bdcb0,e47adb6f53a1fa2b49599b756eaf4265,"Lauren Perez",7841,"franco da rocha",SP
+0130ec6b73b4f7fb58e4a4a78774b47b,2050d9b9721b1e61a6110666d2b2a2a8,"Alexis Stone",23050,"rio de janeiro",RJ
+0140bb3a2e24b8dd7a341eaf707b440e,ac61539bd1e37ef9fc8b951720d90bdb,"Richard Lewis",18707,avare,SP
+0145ffd2fcca22ddeebbcd95f7ad890e,c8fb284ae00d32a177121df1a57d88fa,"Jessica Johnson",3322,"sao paulo",SP
+014693f265c4f52b8c1aa9eb8cd197d5,6b8c64a9320a51ad29012e5fbb9628ab,"John Ward",1424,"sao paulo",SP
+0148f71e97a15ed3cf071ea28250eb87,7a58b4b37ece4d202545b0bf98a18efd,"Samuel Levy",98960,"santo cristo",RS
+014e22ebe12fcc0f03d5f3ed1d15f86f,cd315f6bf86d704bf9f8d60147c8c8aa,"Brian Mccann",58036,"joao pessoa",PB
+014f2d069b53eec84aed9b8c1d5ef270,0d88b12063c0388a66ba0b8761c3ffa2,"Julie Turner",6329,carapicuiba,SP
+014f4ea4b3ed7aaf2db2f8acb6d96e75,5220aec10c2ca305aba8f9c3d7e8b5a3,"Jeremy Clark",9950,diadema,SP
+01509d555b8b6775f5847912d8c52d46,cb296f03ccd21cfcb3ba0778c4f3b7d9,"Ashley Price",12942,atibaia,SP
+016112a43e0319656ab0b25e1d904171,66eeaaa6c61aee3fe0329bb54017a3bb,"Lauren Sutton",6786,"taboao da serra",SP
+0163a9517d96e283b1a883de0e71c826,243bf34f2f9c8c7b941e3ad4783a4b10,"James Jefferson",13070,campinas,SP
+01755c16c986d88fa552ba8d7da81876,6ddc1326692756ab6c0ab86345bf37e0,"April Wiley",65500,chapadinha,MA
+0176ec1982f9f3aa628de3a506191769,cb97135458c20106bf438738fcc09f08,"Antonio Gordon",20241,"rio de janeiro",RJ
+019200fa574c9eda0fbc82c71fcc8fbe,7530369a1ddf13882910895b0559423d,"Timothy Miller",3951,"sao paulo",SP
+0192b93a11b1f588d6f19888b82d02bf,13784315377079cd446a18c98dd70591,"Kristy Lucas",28035,"campos dos goytacazes",RJ
+0197368f9bed3b6ac07506404f78a155,905c02d92e9093133b1147786ac65926,"Aaron Erickson",3057,"sao paulo",SP
+0197df52c22d6ef0aa52ffb63ac80404,ae3b415f236744102ea56e54097f16f5,"Michael Rivera",21750,"rio de janeiro",RJ
+0199164bec886c94218205248559d7b6,90b1c133c701d73bea3f50a1d78730ec,"Donna Wade",13333,indaiatuba,SP
+01993877990b2565abd4e3d741c45b79,9e6890852705a77f9e1ad72395131f27,"Tanner Hawkins",30441,"belo horizonte",MG
+01a2c54f25845c02bff35dbbb7d32c77,1f4336c3226edc8d2c691509a44ac5d4,"Kaitlyn Lane",24130,niteroi,RJ
+01a52718e4ca43d2cc1da7c9209a6325,dbceb1472a69b0b7b0a56d0b9c9893f7,"Veronica Hall",11520,cubatao,SP
+01a56495d1c8bcf831311f5ad7f126a1,5733152cb1f37713b8dbe91142bcf91b,"Cristian Warren",13905,amparo,SP
+01a61e75bd333a349351fba370520597,51498d611c600d2fbc05374a3928cfb2,"Beth Rogers",2475,"sao paulo",SP
+01b7e319fb16f60c28e387d29cd80c38,c029b1b7cd441ce9c808ccf6897fcff0,"Shannon Levine",4006,"sao paulo",SP
+01b8c0cf86a1a5e8653ccfddcf906862,55b73a9973efbb5b662d96896b06f82c,"Mary Andrews",91787,"porto alegre",RS
+01bc42b3e58ab446f0227867f665b127,5ec88e298986ab10dce912388675740a,"Rebecca Williams",81560,curitiba,PR
+01c2a51e4844df386c8bbd058978052c,d36b724da4955220c092763d397fe528,"Elizabeth Delacruz",88348,camboriu,SC
+01cca8f48e415e8612b70b1c5ee759af,ee226c6ced4b9ec3a0beebbd59942d69,"Rick Wallace",49048,aracaju,SE
+01cd1ba7ed9bb74360ae8d7b03575b2d,3ae3020ba7a772196e5f1368d175a65d,"Eric Evans",66610,belem,PA
+01d238a78a68c0b02c73167a63f05f9e,5bb37d32974345ca14be2984fe1d5b7b,"Angela Glass",74565,goiania,GO
+01d3b76b3d6604372075f8f2437b551f,f226f3d81fac042a2880b9d8253c7887,"Luis Underwood",11070,santos,SP
+01e5b020d9c4f26539154b00f632e3ae,e208c1565f7dafbab63310a957a68174,"Megan Lynch",22461,"rio de janeiro",RJ
+01e77dc6abe6f9991bbf5232b5c22d2c,9db3d2eedefa53d6ad2e79cf069ae021,"Thomas Alexander",7951,"francisco morato",SP
+01ea4160e63a7ce5101967e07ddf4c18,be33ce67f6c02b468b94afa895a955fe,"Daniel Gibson",34800,caete,MG
+01eb75533d0297e3a47f6d40e866455c,a9cb618eeb277ea66ffb0681cca2a504,"Jennifer Cunningham",90020,"porto alegre",RS
+01ef9a979bab9ba62386d5abfb646cfc,59e9dd50f3e078818c2faf3de321c6e0,"William Soto",90520,"porto alegre",RS
+01f122c4617c17afeba8f9bf49babfbc,9e7dda935aae28fb55d7170f335e9826,"Robert Adams",86046,londrina,PR
+01f2ee4cddbacc178ecf73bded88abab,ecf2beb50aa1735749335ce3a3bd6806,"Gary Grant",57313,arapiraca,AL
+01f9be48b48de8870e94f9744bd6ed7b,fbb7bc2cb19342a739f67026540ebc53,"Douglas Flores",78068,cuiaba,MT
+01fb2aa709b6a7a424268503d97fc753,08bdc46497e4aacf80a1ea0aaf9b3dfe,"Jamie Stanton",23870,"vila muriqui",RJ
+0205014bc84053ecae74d11d89f35f3c,15c55096f55b5bfe2ac3a08ab95b807d,"Yvonne Brown",37137,alfenas,MG
+0207ca7dd6d2be6e08d8467651759bdd,26fe58cca8d12c853839d4e777a1844b,"Joann Williams",51111,recife,PE
+020b0645ceac44c1ae2de1ed2bc02b54,2efee2f8716aa601b9b98fc5839e8f7c,"Robert Sexton",36660,"alem paraiba",MG
+020edf80d85585b9ccf1c48396ec32aa,df27c250c1f69adb0cf75d0342814ca1,"Deanna Manning",29306,"cachoeiro de itapemirim",ES
+0211481bc6a8abb8fb636b2309bb9931,586ed45ee165fde92d19ce4a4310cd1b,"Jacob Ellis",98910,"tres de maio",RS
+02147933803d610875878623ed98c7d1,024cf57b6da1f225b8b130dcd9093af9,"Michelle Byrd",9181,"santo andre",SP
+021833e9737a1145b5a6e3053f0f4329,18af4524eed79155034a9374880c5078,"Brianna Rodriguez",3211,"sao paulo",SP
+0218de8038240591323aa1f89630a1e8,77001b080dd723bc9a22e538e5e06e41,"Victoria Hart",6463,barueri,SP
+021e84751ba0ead75b6d314a6ead88d9,9a58c55c10b4eb6c69fb0874d8beb466,"Matthew Palmer",23025,"rio de janeiro",RJ
+02228cce72fcd2eb6622b074bc27fe94,966a06d7b193003998f1e41f525d4c83,"Cheryl Williams",22020,"rio de janeiro",RJ
+0227176d396f5394907470617d777fed,38a7a4163d2e36c949153bb5d91f47f2,"Mitchell Kennedy",30170,"belo horizonte",MG
+02277211c9842fee492b8e37a17cf0ff,d0b3390ea758fc3db8a00af6c26e5478,"Kevin Kennedy",81590,curitiba,PR
+02286830664a352f63ecd02e620fa897,a88316db56228d4cec6935b97df4e487,"James Ferguson",65076,"sao luis",MA
+0237d2fa2b48e6fe5e53c09fc74a5cda,ddc3194f4dbd1455cc8722aeefcc8224,"Andrew Mitchell",31660,"belo horizonte",MG
+02385ca219b24812b4c7c65818e3b06a,367fc3b6dc2568f3a73ec808beae99a0,"Mrs. Erica Cooper",8750,"mogi das cruzes",SP
+02424d17085bd31f9856f083bb3aaa42,33eaaa609cbb04eea9220db94b1c4b15,"Brian Luna",14530,miguelopolis,SP
+0244fcc0d060a5943dd7d4d5f87de9c8,fb9760235a090e1747caef67cc951f6c,"Jonathan Serrano",88704,tubarao,SC
+02554a34cc5ba2d5e8908cb7468aec7c,28935e1d8a60128ac5940dbaecacbece,"John Adams",11750,peruibe,SP
+0258af3a8301a7331edc8ba02da35b7c,38fb5f8b5cffb733ba60c32cbb6e80f3,"Timothy Perez DDS",60811,fortaleza,CE
+026378e6d9977bf974a1ebe64f92cfee,2392a29dadcfcc7ce192ebadaa11a27e,"Lauren Wells",8050,"sao paulo",SP
+0266506e68e7eac1c7f726da057c28a9,3341514b8049f4a268e4188fb0211d34,"Stacy Zamora",3127,"sao paulo",SP
+0275161cf1fc69fd8f5412ba423a3004,a3ec147258387f5e0fa36bcc438dc265,"Jackson Thompson",2802,"sao paulo",SP
+027a90872a3f917170f2e2b912363e88,c499f46cfaa21b18442da5fd70b6115f,"Heather Mayo",13049,campinas,SP
+027b997d6d188683680b85d8395c6a9a,146d150a30a6b676706908054a09a17f,"Sarah Steele",24435,"sao goncalo",RJ
+027efc2251512b9150aceb9a5e5b7f53,9e8876439507a7c603809927dd6ef09d,"Glenn Dodson",88303,itajai,SC
+0280e2736a179aa87a59447236a797fa,1c61833a5bbe555d71990cf46c3ccd2b,"Jeffrey Smith",13313,itu,SP
+028f1d106a98669a1c0caaf5866f31ec,df73591a78407ad9b5bf4668ae075aed,"Cody Thomas",86010,londrina,PR
+0298eec43baa253837fca6e98da66903,fc648355528e6e9bdd813a261820ff48,"Justin Lawson",29057,vitoria,ES
+0299a3ec7aac3a18ea88cfa6cf8a74f5,abe351201e61437f658332cdce4c3c52,"Robert Hunter",12260,paraibuna,SP
+029bbe8fe01cef398cb57f8994dc7fc7,2658a19f7aad299279da193e9bed3776,"Felicia Prince",5016,"sao paulo",SP
+029ca19aa34f9311941ab931975cff1b,95363f351776a3f8a43145c79a046053,"Jillian Ellis",86806,apucarana,PR
+02a307e718d16f6dd85c4d15c935c11d,3715e402c05e156df3108939aaa73900,"Steven Lynch",68560,"santana do araguaia",PA
+02aba7ae34101544b479f4487f53fb28,ed08dce6ea329e23c1a6049542082b60,"Misty Sloan",19027,"presidente prudente",SP
+02ae654741ad895368bd9ffc371893e5,507f6af076decee5860e7b57d23ca4aa,"Robin Santiago",4547,"sao paulo",SP
+02af9983dee3e98a57adc7b02f17de3a,c750cfd386791c7a665caa28e05d6f33,"Chad Lee",1448,"sao paulo",SP
+02b168b03c95daba8c837ac1d2f85670,d5ea50c98aa40018a98b94aa503c815a,"Joshua Moses",22260,"rio de janeiro",RJ
+02bcc64ec51494bf78f5a83c1414a4eb,6be5c93f5181e7b8ad88678963bbbcea,"Amber Roberts",11035,santos,SP
+02bd740a9c42959b61e38d5a07d43522,0fbf73cb8a40e33ad3a0b46a6212cd44,"Eric Burch",12228,"sao jose dos campos",SP
+02be3c1e80d42583e71d6c2eb9cade45,434dde55bcf4bfdc3f70e979046c5412,"John Ho",81580,curitiba,PR
+02bf19efae533d95c21b5e1ccc633a88,85c9cc82766d61484d4014b8f1d62dd9,"Susan Henderson",4272,"sao paulo",SP
