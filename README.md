@@ -17,7 +17,7 @@ Note: This repo contains only a sample dataset (~500–600 rows) for demonstrati
 <img width="1000" height="375" alt="image" src="https://github.com/user-attachments/assets/202c3dd2-74e4-436a-8c24-8083542994a1" />
 
 ## Table of Contents
-- [Project Overview](#project-overview)
+- [🧩 Project Overview](#project-overview)
 - [Business Analysis Questions](#Business-Analysis-Questions)
 - [Sample Data Preview w/ ERD Diagram](#Sample-Data-Preview-w-ERD-Diagram)
 - [Queries](#Queries)
