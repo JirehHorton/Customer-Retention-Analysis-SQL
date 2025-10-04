@@ -144,17 +144,52 @@ WHERE count_oi >= 2
 ;
 ```
 
-<img width="207" height="50" alt="REPEAT CUSTOMER %" src="https://github.com/user-attachments/assets/91ebf279-8155-4211-87c2-23e95b5b10d8" />
+<img width="210" height="41" alt="REPEAT CUSTOMER %" src="https://github.com/user-attachments/assets/07125ea9-5d10-4698-8b6f-56d5220b15e8" />
+
 
 **Insight:**
-In this dataset, no customers placed more than one order. This indicates that:
-- The dataset may only include each customer’s first order, or
-- Repeat purchase behavior was not captured in the sample.
+
 
 **Business Implication:**
 
 Potential opportunities to implement loyalty programs or marketing campaigns to repeat customers to encourage repeat purchases
   
+</details>
+
+</details> <details> <summary><strong>Query 3: Cohort Analysis</strong></summary>
+	
+```sql
+SELECT cohort_month, COUNT(DISTINCT customer_unique_id) AS returning_customers
+FROM (
+    SELECT 
+        c.customer_unique_id,
+        DATE_FORMAT(f.cohort_date, '%Y-%m') AS cohort_month,
+        DATE_FORMAT(o.order_delivered_customer_date, '%Y-%m') AS order_month
+    FROM customers c
+    JOIN orders o 
+      ON c.customer_unique_id = o.customer_unique_id
+    JOIN (
+        SELECT customer_unique_id, MIN(order_delivered_customer_date) AS cohort_date
+        FROM orders
+        WHERE order_status = 'delivered'
+        GROUP BY customer_unique_id
+    ) f
+      ON c.customer_unique_id = f.customer_unique_id
+    WHERE o.order_status = 'delivered'
+) AS sub
+WHERE order_month > cohort_month
+GROUP BY cohort_month
+ORDER BY cohort_month DESC;
+```
+
+<img width="279" height="328" alt="CUSTOMER COHORT ANALYSIS" src="https://github.com/user-attachments/assets/5a716478-16af-4d1c-8b0f-384088b42480" />
+
+
+Insight:
+
+Business Implication:
+
+	
 </details>
 
 ---
