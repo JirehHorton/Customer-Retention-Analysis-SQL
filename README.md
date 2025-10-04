@@ -4,7 +4,7 @@
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Business Analysis Questions](#Business-Analysis-Questions)
-- [Sample Data Preview w/ ERD Diagram](#Sample-Data-Preview-w/-ERD-Diagram)
+- [Sample Data Preview w/ ERD Diagram](#Sample-Data-Preview-w-ERD-Diagram)
 - [Queries](#Queries)
 - [Key Takeaways/Business Insights](#Key-Takeaways-/-Business-Insights)
 - [Technologies Used](#technologies-used)
