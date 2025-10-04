@@ -6,7 +6,7 @@
 - [Business Analysis Questions](#Business-Analysis-Questions)
 - [Sample Data Preview w/ ERD Diagram](#Sample-Data-Preview-w-ERD-Diagram)
 - [Queries](#Queries)
-- [Key Takeaways & Business Insights](#Key-Takeaways-&-Business-Insights)
+- [Key Takeaways w/ Business Insights](#Key-Takeaways-w-Business-Insights)
 - [Technologies Used](#technologies-used)
 - [License](#license)
 - [Author Info](#author-info)
@@ -159,7 +159,7 @@ Potential opportunities to implement loyalty programs or marketing campaigns to 
 
 ---
 
-## Key Takeaways & Business Insights 
+## Key Takeaways w/ Business Insights 
 
 chessees
 ---
