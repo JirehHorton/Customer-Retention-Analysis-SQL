@@ -1,7 +1,7 @@
-# Customer Retention Insights – Olist E-Commerce DB
+# 🧩 Customer Retention Insights – Olist E-Commerce DB
 __Turning First-Time Buyers into Loyal Customers Through Cohort & Retention Analysis__
 
-## 🧩 Project Overview
+## Project Overview
 _Analyze customer behavior and retention using the Olist E-Commerce database with SQL. This project demonstrates building relational databases, cleaning and transforming data, and answering key business questions on customer growth and loyalty.This project showcases SQL, database design, data analysis, and business analytics skills, providing actionable insights for business strategy._
 
 __Key highlights:__
@@ -17,7 +17,7 @@ Note: This repo contains only a sample dataset (~500–600 rows) for demonstrati
 <img width="1000" height="375" alt="image" src="https://github.com/user-attachments/assets/202c3dd2-74e4-436a-8c24-8083542994a1" />
 
 ## Table of Contents
-- [🧩 Project Overview](#🧩-project-overview)
+- [Project Overview](#project-overview)
 - [Business Analysis Questions](#Business-Analysis-Questions)
 - [Sample Data Preview w/ ERD Diagram](#Sample-Data-Preview-w-ERD-Diagram)
 - [Queries](#Queries)
