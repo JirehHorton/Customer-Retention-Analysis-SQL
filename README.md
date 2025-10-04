@@ -1,5 +1,20 @@
-# Olist E-Commerce SQL Project
-<img width="1400" height="400" alt="image" src="https://github.com/user-attachments/assets/202c3dd2-74e4-436a-8c24-8083542994a1" />
+# Customer Retention Insights – Olist E-Commerce DB
+__Turning First-Time Buyers into Loyal Customers Through Cohort & Retention Analysis__
+
+## 🧩 Project Overview
+_Analyze customer behavior and retention using the Olist E-Commerce database with SQL. This project demonstrates building relational databases, cleaning and transforming data, and answering key business questions on customer growth and loyalty.This project showcases SQL, database design, data analysis, and business analytics skills, providing actionable insights for business strategy._
+
+__Key highlights:__
+
+- Built relational tables (customers, orders, products, order_items) with primary and foreign key relationships.
+- Populated realistic data (full dataset ~78,000 rows) and created GitHub-friendly samples (~500–600 rows).
+- Tracked new and repeat customers, cohort retention trends, average orders per customer, and top customers by orders or spend.
+- Explored insights into ordering patterns, product sales, and inventory metrics.
+
+
+Note: This repo contains only a sample dataset (~500–600 rows) for demonstration purposes and a larger sample(~78,000 rows) was used for analysis. The full Olist dataset (~600k+ rows) is available on [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+
+<img width="1000" height="375" alt="image" src="https://github.com/user-attachments/assets/202c3dd2-74e4-436a-8c24-8083542994a1" />
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -10,24 +25,6 @@
 - [Technologies Used](#technologies-used)
 - [License](#license)
 - [Author Info](#author-info)
-
-
----
-## Project Overview
-This project demonstrates my ability to work with realistic e-commerce datasets using SQL. I built a relational database from multiple tables—including customers, orders, products, and order_items—and performed data cleaning, transformation, and analysis to answer business questions.
-
-__Key highlights__:
-- Designed primary and foreign key relationships across multiple tables.
-- Populated tables with realistic data (full dataset ~78,000 rows).
-- Created sample subsets (~500–600 rows) for GitHub-friendly sharing.
-- Explored insights such as customer ordering patterns, product sales, and inventory metrics.
-
-This project showcases skills in SQL, database design, and data manipulation—all directly applicable to business analytics and data engineering roles.
-Portfolio project using the Olist e-commerce dataset with SQL &amp; analysis.
-
-Note: 
-This repo contains only a *sample dataset* (~500-600 rows) for demonstration purposes and the full dataset was used during analysis to generate insights.
-The full Olist dataset (~600k+ rows) can be downloaded from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
 ---
 ## Business Analysis Questions
@@ -207,7 +204,7 @@ chessees
 
 ---
 ## License
-- This project is for educational and portfolio purposes only and is not licensed for commercial use. The data used in this project is public E-Commerce Data.
+- This project is for educational and portfolio purposes only and is not licensed for commercial use. The data used in this project is public Olist E-Commerce Data.
 
 ---
 ## Author Info
