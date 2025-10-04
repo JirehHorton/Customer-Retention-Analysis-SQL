@@ -103,7 +103,7 @@ These subsets were randomly sampled from the project analysis dataset(~78,000 ro
 ---
 
 ## Queries 
-<details> <summary><strong>Query 1: New Customers Per Month</strong></summary>
+<details> <summary><strong>📈 Query 1: New Customers Per Month</strong></summary>
 	
 ```sql
 SELECT DATE_FORMAT(first_order, "%Y-%m") AS first_month,
@@ -132,14 +132,14 @@ ORDER BY first_month DESC;
 
 - Helps guide marketing campaigns and allocate resources effectively.
 
-</details> <details> <summary><strong>Query 2: Repeat Customers</strong></summary>
+</details> <details> <summary><strong>🔁 Query 2: Repeat Customers</strong></summary>
 
 ```sql
-SELECT ROUND((COUNT(*) *100.0/ (SELECT COUNT(DISTINCT customer_id) FROM orders)),2)
+SELECT ROUND((COUNT(*) *100.0/ (SELECT COUNT(DISTINCT customer_unique_id) FROM orders)),2)
 	AS repeat_customer_percentage
 FROM (
-	SELECT customer_id, COUNT(order_id) AS count_oi FROM ORDERS
-	GROUP BY customer_id) AS customer_orders
+	SELECT customer_unique_id, COUNT(order_id) AS count_oi FROM orders
+	GROUP BY customer_unique_id) AS customer_orders
 WHERE count_oi >= 2
 ;
 ```
@@ -156,7 +156,7 @@ Potential opportunities to implement loyalty programs or marketing campaigns to 
   
 </details>
 
-</details> <details> <summary><strong>Query 3: Cohort Analysis</strong></summary>
+</details> <details> <summary><strong>📊 Query 3: Cohort Analysis</strong></summary>
 	
 ```sql
 SELECT cohort_month, COUNT(DISTINCT customer_unique_id) AS returning_customers
