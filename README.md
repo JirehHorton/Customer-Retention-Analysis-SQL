@@ -1,4 +1,4 @@
-# 🧩 Customer Retention Insights – Olist E-Commerce DB
+# 🛍️ 💵 Customer Retention Insights  – Olist E-Commerce DB 
 __Turning First-Time Buyers into Loyal Customers Through Cohort & Retention Analysis__
 
 ## Project Overview
