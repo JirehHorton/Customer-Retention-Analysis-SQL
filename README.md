@@ -94,6 +94,9 @@ These subsets were randomly sampled from the project analysis dataset(~78,000 ro
 
 - Customers → Orders → Order_Items → Products
 - Schema: customers(PK) → orders(PK, FK→customers) → order_items(PK, FK→orders/products) ← products(PK)
+- Orders table retains original customer_id for reference, but customer_unique_id was used as 
+the true key for customer-level analysis
+
 
 <img width="600" height="400" alt="O_LIST ERD DIAGRAM" src="https://github.com/user-attachments/assets/95898861-559f-44f0-ad34-ec1f46c0da99" />
 
