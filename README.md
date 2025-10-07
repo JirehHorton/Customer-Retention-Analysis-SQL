@@ -211,7 +211,7 @@ Business Implication:
 
 </details>
 
-</details> <details> <summary><strong>💰 Query 5: Top 10 Customers By Spending/Order Count </strong></summary>
+</details> <details> <summary><strong>💰 Query 5: Top 10 Customers By Total Spending/Order Count </strong></summary>
 	
 ```sql
 SELECT ROUND(AVG(order_count),2) AS order_average
