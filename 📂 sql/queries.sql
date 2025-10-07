@@ -12,7 +12,8 @@ FROM (
 	GROUP BY customer_unique_id
 ) AS sub
 GROUP BY first_month
-ORDER BY first_month DESC; 
+ORDER BY first_month DESC
+; 
 
        -- QUERY #2 Repeat Customer %  --
 
