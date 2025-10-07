@@ -12,7 +12,7 @@ __Key highlights:__
 - Explored insights into ordering patterns, product sales, and inventory metrics.
 
 
-Note: This repo contains only a sample dataset (~500–600 rows) for demonstration purposes and a larger sample(~78,000 rows) was used for analysis. The full Olist dataset (~600k+ rows) is available on [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+Note: This repo contains only a sample dataset (~500–600 rows) for demonstration purposes and a larger sample(~78,000 rows) was used for this project analysis. The full Olist dataset (~600k+ rows) is available on [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
 
 <img width="1000" height="375" alt="image" src="https://github.com/user-attachments/assets/202c3dd2-74e4-436a-8c24-8083542994a1" />
 
@@ -137,8 +137,7 @@ SELECT ROUND((COUNT(*) *100.0/ (SELECT COUNT(DISTINCT customer_unique_id) FROM o
 FROM (
 	SELECT customer_unique_id, COUNT(order_id) AS count_oi FROM orders
 	GROUP BY customer_unique_id) AS customer_orders
-WHERE count_oi >= 2
-;
+WHERE count_oi >= 2;
 ```
 
 <img width="210" height="41" alt="REPEAT CUSTOMER %" src="https://github.com/user-attachments/assets/07125ea9-5d10-4698-8b6f-56d5220b15e8" />
@@ -199,8 +198,7 @@ FROM (
 	JOIN orders o 
 	ON c.customer_unique_id = o.customer_unique_id
 	GROUP BY c.customer_unique_id
-    ) AS sub
-;
+    ) AS sub;
 ```
 <img width="146" height="48" alt="AVERAGE ORDERS PER CUSTOMER" src="https://github.com/user-attachments/assets/817bab88-d7b9-4da6-bd3b-b0799b3b215d" />
 
@@ -214,17 +212,24 @@ Business Implication:
 </details> <details> <summary><strong>💰 Query 5: Top 10 Customers By Total Spending/Order Count </strong></summary>
 	
 ```sql
-SELECT ROUND(AVG(order_count),2) AS order_average
-FROM (
-	SELECT c.customer_unique_id, COUNT(o.order_status) AS order_count
-	FROM customers c
-	JOIN orders o 
-	ON c.customer_unique_id = o.customer_unique_id
-	GROUP BY c.customer_unique_id
-    ) AS sub
-;
+SELECT  MIN(c.customer_name) AS customer_name,
+		o.customer_unique_id, 
+		COUNT(DISTINCT o.order_id) AS total_orders,
+		SUM(oi.price) + SUM(oi.freight_value) AS total_spending 
+FROM order_items oi
+JOIN orders o 
+ON oi.order_id = o.order_id
+JOIN customers c
+ON c.customer_unique_id = o.customer_unique_id
+GROUP BY c.customer_unique_id
+ORDER BY total_spending DESC 						--can be interchanged with total_orders to see TOP 10 Order Counts
+LIMIT 10;
 ```
+- TOP 10 CUSTOMERS BY TOTAL SPENDING
+
 <img width="558" height="181" alt="TOP 10 CUSTOMERS BY TOTAL SPENDING" src="https://github.com/user-attachments/assets/2396fef1-5dcf-4082-a607-f7f2afeaf5e6" />
+
+- TOP 10 CUSTOMERS BY ORDER COUNT
 
 <img width="538" height="176" alt="TOP 10 CUSTOMERS BY ORDER COUNT" src="https://github.com/user-attachments/assets/0b8f7393-2996-4537-b10a-73dd9c9c3a7e" />
 
