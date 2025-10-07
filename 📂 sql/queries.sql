@@ -45,5 +45,21 @@ FROM (
 ) AS sub
 WHERE order_month > cohort_month
 GROUP BY cohort_month
-ORDER BY cohort_month DESC;
+ORDER BY cohort_month DESC
+;
+
+		-- QUERY #4 Average Orders Per Customer  --
+SELECT ROUND(AVG(order_count),2) AS order_average
+FROM (
+	SELECT c.customer_unique_id, COUNT(o.order_status) AS order_count
+	FROM customers c
+	JOIN orders o 
+	ON c.customer_unique_id = o.customer_unique_id
+	GROUP BY c.customer_unique_id
+    ) AS sub
+;
+
+		-- QUERY #5 Average Orders Per Customer  --
+
+
 
