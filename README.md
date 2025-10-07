@@ -189,6 +189,52 @@ Business Implication:
 	
 </details>
 
+</details> <details> <summary><strong>📦 Query 4: Average Orders Per Customer</strong></summary>
+	
+```sql
+SELECT ROUND(AVG(order_count),2) AS order_average
+FROM (
+	SELECT c.customer_unique_id, COUNT(o.order_status) AS order_count
+	FROM customers c
+	JOIN orders o 
+	ON c.customer_unique_id = o.customer_unique_id
+	GROUP BY c.customer_unique_id
+    ) AS sub
+;
+```
+<img width="146" height="48" alt="AVERAGE ORDERS PER CUSTOMER" src="https://github.com/user-attachments/assets/817bab88-d7b9-4da6-bd3b-b0799b3b215d" />
+
+
+Insight:
+
+Business Implication:
+
+</details>
+
+</details> <details> <summary><strong>💰 Query 5: Top 10 Customers By Spending/Order Count </strong></summary>
+	
+```sql
+SELECT ROUND(AVG(order_count),2) AS order_average
+FROM (
+	SELECT c.customer_unique_id, COUNT(o.order_status) AS order_count
+	FROM customers c
+	JOIN orders o 
+	ON c.customer_unique_id = o.customer_unique_id
+	GROUP BY c.customer_unique_id
+    ) AS sub
+;
+```
+<img width="558" height="181" alt="TOP 10 CUSTOMERS BY TOTAL SPENDING" src="https://github.com/user-attachments/assets/2396fef1-5dcf-4082-a607-f7f2afeaf5e6" />
+
+<img width="538" height="176" alt="TOP 10 CUSTOMERS BY ORDER COUNT" src="https://github.com/user-attachments/assets/0b8f7393-2996-4537-b10a-73dd9c9c3a7e" />
+
+
+Insight:
+
+Business Implication:
+
+</details>
+
 ---
 
 ## Key Takeaways w/ Business Insights 
