@@ -60,7 +60,19 @@ FROM (
     ) AS sub
 ;
 
-		-- QUERY #5 Average Orders Per Customer  --
-
+		-- QUERY #5 Top 10 Customers by Spending  --
+SELECT  MIN(c.customer_name) AS customer_name,
+		o.customer_unique_id, 
+		COUNT(DISTINCT o.order_id) AS total_orders,
+		SUM(oi.price) + SUM(oi.freight_value) AS total_spending 
+FROM order_items oi
+JOIN orders o 
+ON oi.order_id = o.order_id
+JOIN customers c
+ON c.customer_unique_id = o.customer_unique_id
+GROUP BY c.customer_unique_id
+ORDER BY total_spending DESC 						--can be interchanged with total_orders to see TOP 10 Order Counts
+LIMIT 10
+;
 
 
