@@ -1,5 +1,5 @@
 # 🛍️ 💵 Customer Retention Insights  – Olist E-Commerce DB 
-__Turning First-Time Buyers into Loyal Customers Through Cohort & Retention Analysis__
+## _Turning First-Time Buyers into Loyal Customers Through Cohort & Retention Analysis_
 
 ## Project Overview
 _Analyze customer behavior and retention using the Olist E-Commerce database with SQL. This project demonstrates building relational databases, cleaning and transforming data, and answering key business questions on customer growth and loyalty.This project showcases SQL, database design, data analysis, and business analytics skills, providing actionable insights for business strategy._
@@ -8,13 +8,13 @@ __Key highlights:__
 
 - Built relational tables (customers, orders, products, order_items) with primary and foreign key relationships.
 - Populated realistic data (full dataset ~78,000 rows) and created GitHub-friendly samples (~500–600 rows).
-- Tracked new and repeat customers, cohort retention trends, average orders per customer, and top customers by orders or spend.
+- Tracked new and repeat customers, cohort retention trends, average orders per customer, and top customers by spending & orders.
 - Explored insights into ordering patterns, product sales, and inventory metrics.
 
 
 Note: This repo contains only a sample dataset (~500–600 rows) for demonstration purposes and a larger sample(~78,000 rows) was used for this project analysis. The full Olist dataset (~600k+ rows) is available on [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
 
-<img width="1000" height="375" alt="image" src="https://github.com/user-attachments/assets/202c3dd2-74e4-436a-8c24-8083542994a1" />
+<img width="1100" height="325" alt="image" src="https://github.com/user-attachments/assets/202c3dd2-74e4-436a-8c24-8083542994a1" />
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -62,6 +62,8 @@ ORDER BY first_month DESC;
 
 - 💡 _New customer acquisition grew steadily through 2017 and peaked in mid-2018, likely driven by effective campaigns; the late decline may reflect data cutoff rather than performance, highlighting strong underlying momentum._
 
+New Customers Per Month 
+---
 <img width="255" height="402" alt="NEW CUSTOMERS PER MONTH" src="https://github.com/user-attachments/assets/be01972e-f750-499e-949a-6a38a87d2824" />
 
 
@@ -79,6 +81,8 @@ WHERE count_oi >= 2;
 
 - 💡 _Only 5.59% of customers made repeat purchases, indicating low retention, a vast majority are one-time buyers and highlighting the need for stronger post-purchase engagement to boost customer loyalty and lifetime value._
 
+Repeat Customer (%)
+---
 <img width="210" height="41" alt="REPEAT CUSTOMER %" src="https://github.com/user-attachments/assets/07125ea9-5d10-4698-8b6f-56d5220b15e8" />
   
 </details>
@@ -108,12 +112,13 @@ WHERE order_month > cohort_month
 GROUP BY cohort_month
 ORDER BY cohort_month DESC;
 ```
-
-<img width="279" height="328" alt="CUSTOMER COHORT ANALYSIS" src="https://github.com/user-attachments/assets/5a716478-16af-4d1c-8b0f-384088b42480" />
-
 **Insight & Business Implication:**
 
 - 💡 _Cohorts from 2017 show consistent repeat activity (≈30–40 returning customers), while newer 2018 cohorts appear lower—likely due to limited observation time—indicating stable historical retention but incomplete recent data._
+
+Returning Customers By Cohort Month
+---
+<img width="279" height="328" alt="CUSTOMER COHORT ANALYSIS" src="https://github.com/user-attachments/assets/5a716478-16af-4d1c-8b0f-384088b42480" />
 	
 </details>
 
@@ -129,11 +134,13 @@ FROM (
 	GROUP BY c.customer_unique_id
     ) AS sub;
 ```
-<img width="146" height="48" alt="AVERAGE ORDERS PER CUSTOMER" src="https://github.com/user-attachments/assets/817bab88-d7b9-4da6-bd3b-b0799b3b215d" />
-
 **Insight & Business Implication:**
 
 - 💡 _Customers order just once on average (1.08), highlighting low repeat behavior and a clear opportunity to grow lifetime value through retention strategies like targeted promotions or loyalty programs._
+
+Average Orders Per Customer
+---
+<img width="146" height="48" alt="AVERAGE ORDERS PER CUSTOMER" src="https://github.com/user-attachments/assets/817bab88-d7b9-4da6-bd3b-b0799b3b215d" />
 
 </details>
 
@@ -153,24 +160,32 @@ GROUP BY c.customer_unique_id
 ORDER BY total_spending DESC 						--can be interchanged with total_orders to see TOP 10 Order Counts
 LIMIT 10;
 ```
-- TOP 10 CUSTOMERS BY TOTAL SPENDING
-
-<img width="558" height="181" alt="TOP 10 CUSTOMERS BY TOTAL SPENDING" src="https://github.com/user-attachments/assets/2396fef1-5dcf-4082-a607-f7f2afeaf5e6" />
-
-- TOP 10 CUSTOMERS BY ORDER COUNT
-
-<img width="538" height="176" alt="TOP 10 CUSTOMERS BY ORDER COUNT" src="https://github.com/user-attachments/assets/0b8f7393-2996-4537-b10a-73dd9c9c3a7e" />
-
 **Insight & Business Implication:**
 
--NEW
+- 💡 _High spenders buy big once, frequent buyers buy smaller often—opportunities to drive loyalty, repeat purchases, and order value via upsells and targeted promotions._
+
+TOP 10 CUSTOMERS BY TOTAL SPENDING
+---
+<img width="558" height="181" alt="TOP 10 CUSTOMERS BY TOTAL SPENDING" src="https://github.com/user-attachments/assets/2396fef1-5dcf-4082-a607-f7f2afeaf5e6" />
+
+TOP 10 CUSTOMERS BY ORDER COUNT
+---
+<img width="538" height="176" alt="TOP 10 CUSTOMERS BY ORDER COUNT" src="https://github.com/user-attachments/assets/0b8f7393-2996-4537-b10a-73dd9c9c3a7e" />
 
 </details>
 
 ---
 ## Key Takeaways w/ Business Insights 
 
-chessees
+- 📈 Customer acquisition grew steadily through 2017, peaking in mid-2018, showing strong marketing performance.
+
+- 🔁 Repeat purchases are very low (5.59%), revealing a clear retention gap.
+
+- 📊 Cohort analysis shows stable repeat activity among early customers, while new cohorts need early engagement.
+
+- 📦 Average orders per customer is just 1.08, highlighting opportunities to increase lifetime value through promotions and loyalty programs.
+
+- 💰 Top customers either make one large purchase or frequent smaller ones—both groups offer chances to boost repeat purchases and order value via upsells, loyalty initiatives, and targeted offers.
 
 ---
 ## Sample Data Preview w/ ERD Diagram
@@ -231,7 +246,8 @@ These subsets were randomly sampled from the project analysis dataset(~78,000 ro
 - Orders table retains original customer_id for reference, but customer_unique_id was used as 
 the true key for customer-level analysis
 
-
+ERD Diagram
+---
 <img width="600" height="400" alt="O_LIST ERD DIAGRAM" src="https://github.com/user-attachments/assets/95898861-559f-44f0-ad34-ec1f46c0da99" />
 
 ---
