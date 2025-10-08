@@ -19,9 +19,9 @@ Note: This repo contains only a sample dataset (~500–600 rows) for demonstrati
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Business Analysis Questions](#Business-Analysis-Questions)
-- [Sample Data Preview w/ ERD Diagram](#Sample-Data-Preview-w-ERD-Diagram)
 - [Queries](#Queries)
 - [Key Takeaways w/ Business Insights](#Key-Takeaways-w-Business-Insights)
+- [Sample Data Preview w/ ERD Diagram](#Sample-Data-Preview-w-ERD-Diagram)
 - [Technologies Used](#technologies-used)
 - [License](#license)
 - [Author Info](#author-info)
@@ -30,13 +30,147 @@ Note: This repo contains only a sample dataset (~500–600 rows) for demonstrati
 ## Business Analysis Questions
 This analysis was driven by the following business questions:
 
-- #1. __📈 New Customers per Month__ - How many new customers are acquired each month?
-- #2. __🔁 Repeat Customers__ - What percentage of customers make repeat purchases?
-- #3. __📊 Cohort Analysis__ - For each month, how many customers return in subsequent months?
-- #4. __📦 Average Orders per Customer__ - How many orders does an average customer place?
-- #5. __💰 Top Customers__ - Who are the customers with the highest number of orders or total spend?
+- #1. 📈 _**New Customers per Month**__ - How many new customers are acquired each month?
+- #2. 🔁 _**Repeat Customers**__ - What percentage of customers make repeat purchases?
+- #3. 📊 _**Cohort Analysis**__ - For each month, how many customers return in subsequent months?
+- #4. 📦 _**Average Orders per Customer**__ - How many orders does an average customer place?
+- #5. 💰 _**Top Customers**__ - Who are the customers with the highest number of orders or total spend?
 
 These questions guided the data analysis and helped identify actionable insights for the e-commerce business.
+
+---
+## Queries 
+<details> <summary><strong>📈 Query 1: New Customers Per Month</strong></summary>
+	
+```sql
+SELECT DATE_FORMAT(first_order, "%Y-%m") AS first_month,
+COUNT(DISTINCT customer_unique_id) AS new_customers
+FROM ( 
+	SELECT c.customer_unique_id,
+		   MIN(order_delivered_customer_date) AS first_order
+	FROM customers c
+	JOIN orders o
+		ON c.customer_unique_id = o.customer_unique_id
+	WHERE order_status = 'delivered'
+	GROUP BY customer_unique_id
+) AS sub
+GROUP BY first_month
+ORDER BY first_month DESC; 
+```
+
+**Insight & Business Implication:**
+
+- 💡 _New customer acquisition grew steadily through 2017 and peaked in mid-2018, likely driven by effective campaigns; the late decline may reflect data cutoff rather than performance, highlighting strong underlying momentum._
+
+<img width="255" height="402" alt="NEW CUSTOMERS PER MONTH" src="https://github.com/user-attachments/assets/be01972e-f750-499e-949a-6a38a87d2824" />
+
+
+</details> <details> <summary><strong>🔁 Query 2: Repeat Customers</strong></summary>
+
+```sql
+SELECT ROUND((COUNT(*) *100.0/ (SELECT COUNT(DISTINCT customer_unique_id) FROM orders)),2)
+	AS repeat_customer_percentage
+FROM (
+	SELECT customer_unique_id, COUNT(order_id) AS count_oi FROM orders
+	GROUP BY customer_unique_id) AS customer_orders
+WHERE count_oi >= 2;
+```
+**Insight & Business Implication:**
+
+- 💡 _Only 5.59% of customers made repeat purchases, indicating low retention, a vast majority are one-time buyers and highlighting the need for stronger post-purchase engagement to boost customer loyalty and lifetime value._
+
+<img width="210" height="41" alt="REPEAT CUSTOMER %" src="https://github.com/user-attachments/assets/07125ea9-5d10-4698-8b6f-56d5220b15e8" />
+  
+</details>
+
+</details> <details> <summary><strong>📊 Query 3: Cohort Analysis</strong></summary>
+	
+```sql
+SELECT cohort_month, COUNT(DISTINCT customer_unique_id) AS returning_customers
+FROM (
+    SELECT 
+        c.customer_unique_id,
+        DATE_FORMAT(f.cohort_date, '%Y-%m') AS cohort_month,
+        DATE_FORMAT(o.order_delivered_customer_date, '%Y-%m') AS order_month
+    FROM customers c
+    JOIN orders o 
+      ON c.customer_unique_id = o.customer_unique_id
+    JOIN (
+        SELECT customer_unique_id, MIN(order_delivered_customer_date) AS cohort_date
+        FROM orders
+        WHERE order_status = 'delivered'
+        GROUP BY customer_unique_id
+    ) f
+      ON c.customer_unique_id = f.customer_unique_id
+    WHERE o.order_status = 'delivered'
+) AS sub
+WHERE order_month > cohort_month
+GROUP BY cohort_month
+ORDER BY cohort_month DESC;
+```
+
+<img width="279" height="328" alt="CUSTOMER COHORT ANALYSIS" src="https://github.com/user-attachments/assets/5a716478-16af-4d1c-8b0f-384088b42480" />
+
+**Insight & Business Implication:**
+
+- 💡 _Cohorts from 2017 show consistent repeat activity (≈30–40 returning customers), while newer 2018 cohorts appear lower—likely due to limited observation time—indicating stable historical retention but incomplete recent data._
+	
+</details>
+
+</details> <details> <summary><strong>📦 Query 4: Average Orders Per Customer</strong></summary>
+	
+```sql
+SELECT ROUND(AVG(order_count),2) AS order_average
+FROM (
+	SELECT c.customer_unique_id, COUNT(o.order_status) AS order_count
+	FROM customers c
+	JOIN orders o 
+	ON c.customer_unique_id = o.customer_unique_id
+	GROUP BY c.customer_unique_id
+    ) AS sub;
+```
+<img width="146" height="48" alt="AVERAGE ORDERS PER CUSTOMER" src="https://github.com/user-attachments/assets/817bab88-d7b9-4da6-bd3b-b0799b3b215d" />
+
+**Insight & Business Implication:**
+
+- 💡 _Customers order just once on average (1.08), highlighting low repeat behavior and a clear opportunity to grow lifetime value through retention strategies like targeted promotions or loyalty programs._
+
+</details>
+
+</details> <details> <summary><strong>💰 Query 5: Top 10 Customers By Total Spending/Order Count </strong></summary>
+	
+```sql
+SELECT  MIN(c.customer_name) AS customer_name,
+		o.customer_unique_id, 
+		COUNT(DISTINCT o.order_id) AS total_orders,
+		SUM(oi.price) + SUM(oi.freight_value) AS total_spending 
+FROM order_items oi
+JOIN orders o 
+ON oi.order_id = o.order_id
+JOIN customers c
+ON c.customer_unique_id = o.customer_unique_id
+GROUP BY c.customer_unique_id
+ORDER BY total_spending DESC 						--can be interchanged with total_orders to see TOP 10 Order Counts
+LIMIT 10;
+```
+- TOP 10 CUSTOMERS BY TOTAL SPENDING
+
+<img width="558" height="181" alt="TOP 10 CUSTOMERS BY TOTAL SPENDING" src="https://github.com/user-attachments/assets/2396fef1-5dcf-4082-a607-f7f2afeaf5e6" />
+
+- TOP 10 CUSTOMERS BY ORDER COUNT
+
+<img width="538" height="176" alt="TOP 10 CUSTOMERS BY ORDER COUNT" src="https://github.com/user-attachments/assets/0b8f7393-2996-4537-b10a-73dd9c9c3a7e" />
+
+**Insight & Business Implication:**
+
+-NEW
+
+</details>
+
+---
+## Key Takeaways w/ Business Insights 
+
+chessees
 
 ---
 ## Sample Data Preview w/ ERD Diagram
@@ -100,154 +234,6 @@ the true key for customer-level analysis
 
 <img width="600" height="400" alt="O_LIST ERD DIAGRAM" src="https://github.com/user-attachments/assets/95898861-559f-44f0-ad34-ec1f46c0da99" />
 
----
-
-## Queries 
-<details> <summary><strong>📈 Query 1: New Customers Per Month</strong></summary>
-	
-```sql
-SELECT DATE_FORMAT(first_order, "%Y-%m") AS first_month,
-COUNT(DISTINCT customer_unique_id) AS new_customers
-FROM ( 
-	SELECT c.customer_unique_id,
-		   MIN(order_delivered_customer_date) AS first_order
-	FROM customers c
-	JOIN orders o
-		ON c.customer_unique_id = o.customer_unique_id
-	WHERE order_status = 'delivered'
-	GROUP BY customer_unique_id
-) AS sub
-GROUP BY first_month
-ORDER BY first_month DESC; 
-```
-
-<img width="255" height="402" alt="NEW CUSTOMERS PER MONTH" src="https://github.com/user-attachments/assets/be01972e-f750-499e-949a-6a38a87d2824" />
-
-
-**Insight:**
-
-- NEED TO UPDATE THIS 
-
-**Business Implication:**
-
-- Helps guide marketing campaigns and allocate resources effectively.
-
-</details> <details> <summary><strong>🔁 Query 2: Repeat Customers</strong></summary>
-
-```sql
-SELECT ROUND((COUNT(*) *100.0/ (SELECT COUNT(DISTINCT customer_unique_id) FROM orders)),2)
-	AS repeat_customer_percentage
-FROM (
-	SELECT customer_unique_id, COUNT(order_id) AS count_oi FROM orders
-	GROUP BY customer_unique_id) AS customer_orders
-WHERE count_oi >= 2;
-```
-
-<img width="210" height="41" alt="REPEAT CUSTOMER %" src="https://github.com/user-attachments/assets/07125ea9-5d10-4698-8b6f-56d5220b15e8" />
-
-
-**Insight:**
-
-
-**Business Implication:**
-
-Potential opportunities to implement loyalty programs or marketing campaigns to repeat customers to encourage repeat purchases
-  
-</details>
-
-</details> <details> <summary><strong>📊 Query 3: Cohort Analysis</strong></summary>
-	
-```sql
-SELECT cohort_month, COUNT(DISTINCT customer_unique_id) AS returning_customers
-FROM (
-    SELECT 
-        c.customer_unique_id,
-        DATE_FORMAT(f.cohort_date, '%Y-%m') AS cohort_month,
-        DATE_FORMAT(o.order_delivered_customer_date, '%Y-%m') AS order_month
-    FROM customers c
-    JOIN orders o 
-      ON c.customer_unique_id = o.customer_unique_id
-    JOIN (
-        SELECT customer_unique_id, MIN(order_delivered_customer_date) AS cohort_date
-        FROM orders
-        WHERE order_status = 'delivered'
-        GROUP BY customer_unique_id
-    ) f
-      ON c.customer_unique_id = f.customer_unique_id
-    WHERE o.order_status = 'delivered'
-) AS sub
-WHERE order_month > cohort_month
-GROUP BY cohort_month
-ORDER BY cohort_month DESC;
-```
-
-<img width="279" height="328" alt="CUSTOMER COHORT ANALYSIS" src="https://github.com/user-attachments/assets/5a716478-16af-4d1c-8b0f-384088b42480" />
-
-
-Insight:
-
-Business Implication:
-
-	
-</details>
-
-</details> <details> <summary><strong>📦 Query 4: Average Orders Per Customer</strong></summary>
-	
-```sql
-SELECT ROUND(AVG(order_count),2) AS order_average
-FROM (
-	SELECT c.customer_unique_id, COUNT(o.order_status) AS order_count
-	FROM customers c
-	JOIN orders o 
-	ON c.customer_unique_id = o.customer_unique_id
-	GROUP BY c.customer_unique_id
-    ) AS sub;
-```
-<img width="146" height="48" alt="AVERAGE ORDERS PER CUSTOMER" src="https://github.com/user-attachments/assets/817bab88-d7b9-4da6-bd3b-b0799b3b215d" />
-
-
-Insight:
-
-Business Implication:
-
-</details>
-
-</details> <details> <summary><strong>💰 Query 5: Top 10 Customers By Total Spending/Order Count </strong></summary>
-	
-```sql
-SELECT  MIN(c.customer_name) AS customer_name,
-		o.customer_unique_id, 
-		COUNT(DISTINCT o.order_id) AS total_orders,
-		SUM(oi.price) + SUM(oi.freight_value) AS total_spending 
-FROM order_items oi
-JOIN orders o 
-ON oi.order_id = o.order_id
-JOIN customers c
-ON c.customer_unique_id = o.customer_unique_id
-GROUP BY c.customer_unique_id
-ORDER BY total_spending DESC 						--can be interchanged with total_orders to see TOP 10 Order Counts
-LIMIT 10;
-```
-- TOP 10 CUSTOMERS BY TOTAL SPENDING
-
-<img width="558" height="181" alt="TOP 10 CUSTOMERS BY TOTAL SPENDING" src="https://github.com/user-attachments/assets/2396fef1-5dcf-4082-a607-f7f2afeaf5e6" />
-
-- TOP 10 CUSTOMERS BY ORDER COUNT
-
-<img width="538" height="176" alt="TOP 10 CUSTOMERS BY ORDER COUNT" src="https://github.com/user-attachments/assets/0b8f7393-2996-4537-b10a-73dd9c9c3a7e" />
-
-
-Insight:
-
-Business Implication:
-
-</details>
-
----
-
-## Key Takeaways w/ Business Insights 
-
-chessees
 ---
 
 ## Technologies Used
