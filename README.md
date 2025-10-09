@@ -17,7 +17,7 @@ Note: This repo contains only a sample dataset (~500–600 rows) for demonstrati
 <img width="1100" height="325" alt="image" src="https://github.com/user-attachments/assets/202c3dd2-74e4-436a-8c24-8083542994a1" />
 
 ## Table of Contents
-- [Project Overview](#-project-overview)
+- [Project Overview](#-project-overview-🎯)
 - [Business Analysis Questions](#Business-Analysis-Questions)
 - [Queries](#Queries)
 - [Key Takeaways w/ Business Insights](#Key-Takeaways-w-Business-Insights)
