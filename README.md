@@ -30,11 +30,11 @@ Note: This repo contains only a sample dataset (~500–600 rows) for demonstrati
 ## Business Analysis Questions
 This analysis was driven by the following business questions:
 
-- #1. 📈 _**New Customers per Month**__ - How many new customers are acquired each month?
-- #2. 🔁 _**Repeat Customers**__ - What percentage of customers make repeat purchases?
-- #3. 📊 _**Cohort Analysis**__ - For each month, how many customers return in subsequent months?
-- #4. 📦 _**Average Orders per Customer**__ - How many orders does an average customer place?
-- #5. 💰 _**Top Customers**__ - Who are the customers with the highest number of orders or total spend?
+- #1. 📈 _**New Customers per Month**_ - How many new customers are acquired each month?
+- #2. 🔁 _**Repeat Customers**_ - What percentage of customers make repeat purchases?
+- #3. 📊 _**Cohort Analysis**_ - For each month, how many customers return in subsequent months?
+- #4. 📦 _**Average Orders per Customer**_ - How many orders does an average customer place?
+- #5. 💰 _**Top Customers**_ - Who are the customers with the highest number of orders or total spend?
 
 These questions guided the data analysis and helped identify actionable insights for the e-commerce business.
 
