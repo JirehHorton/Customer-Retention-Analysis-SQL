@@ -2,7 +2,7 @@
 ## _Turning First-Time Buyers into Loyal Customers Through Cohort & Retention Analysis_
 
 ## 🎯 Project Overview  
-_Analyzing customer behavior and retention using the Olist E-Commerce database with SQL. This project demonstrates building relational databases, cleaning and transforming data, and answering key business questions on customer growth and loyalty. This project also showcases SQL, database design, data analysis, and business analytics skills, providing actionable insights for business strategy._
+_Using SQL & Tableau, I extracted customer data and created a customer cohort dashboard to track retention I found that only 5.6% of customers returned for another purchase and that each customer placed just 1.08 orders on average—a clear sign of untapped retention potential. Customer growth peaked in mid-2018, but newer cohorts showed weaker loyalty. These insights point to opportunities to improve customer lifetime value through targeted loyalty programs, personalized marketing, and stronger post-purchase engagement._
 
 ## Business Analysis Questions
 This analysis was driven by the following business questions:
