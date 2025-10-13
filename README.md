@@ -1,8 +1,19 @@
-# 🛍️ 💵 Customer Retention Insights  – Olist E-Commerce DB 
+# 📊 Customer Retention Analysis for E-Commerce  
 ## _Turning First-Time Buyers into Loyal Customers Through Cohort & Retention Analysis_
 
 ## 🎯 Project Overview  
-_Analyze customer behavior and retention using the Olist E-Commerce database with SQL. This project demonstrates building relational databases, cleaning and transforming data, and answering key business questions on customer growth and loyalty. This project also showcases SQL, database design, data analysis, and business analytics skills, providing actionable insights for business strategy._
+_Analyzing customer behavior and retention using the Olist E-Commerce database with SQL. This project demonstrates building relational databases, cleaning and transforming data, and answering key business questions on customer growth and loyalty. This project also showcases SQL, database design, data analysis, and business analytics skills, providing actionable insights for business strategy._
+
+## Business Analysis Questions
+This analysis was driven by the following business questions:
+
+- #1. 📈 _**New Customers per Month**_ - How many new customers are acquired each month?
+- #2. 🔁 _**Repeat Customers**_ - What percentage of customers make repeat purchases?
+- #3. 📊 _**Cohort Analysis**_ - For each month, how many customers return in subsequent months?
+- #4. 📦 _**Average Orders per Customer**_ - How many orders does an average customer place?
+- #5. 💰 _**Top Customers**_ - Who are the customers with the highest number of orders or total spend?
+
+These questions guided the data analysis and helped identify actionable insights for the e-commerce business.
 
 __Key highlights:__
 
@@ -10,9 +21,6 @@ __Key highlights:__
 - Populated realistic data (full dataset ~78,000 rows) and created GitHub-friendly samples (~500–600 rows).
 - Tracked new and repeat customers, cohort retention trends, average orders per customer, and top customers by spending & orders.
 - Explored insights into ordering patterns, product sales, and inventory metrics.
-
-
-Note: This repo contains only a sample dataset (~500–600 rows) for demonstration purposes and a larger sample(~78,000 rows) was used for this project analysis. The full Olist dataset (~600k+ rows) is available on [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
 
 <img width="1100" height="325" alt="image" src="https://github.com/user-attachments/assets/202c3dd2-74e4-436a-8c24-8083542994a1" />
 
@@ -25,18 +33,6 @@ Note: This repo contains only a sample dataset (~500–600 rows) for demonstrati
 - [Technologies Used](#technologies-used)
 - [License](#license)
 - [Author Info](#author-info)
-
----
-## Business Analysis Questions
-This analysis was driven by the following business questions:
-
-- #1. 📈 _**New Customers per Month**_ - How many new customers are acquired each month?
-- #2. 🔁 _**Repeat Customers**_ - What percentage of customers make repeat purchases?
-- #3. 📊 _**Cohort Analysis**_ - For each month, how many customers return in subsequent months?
-- #4. 📦 _**Average Orders per Customer**_ - How many orders does an average customer place?
-- #5. 💰 _**Top Customers**_ - Who are the customers with the highest number of orders or total spend?
-
-These questions guided the data analysis and helped identify actionable insights for the e-commerce business.
 
 ---
 ## Queries 
@@ -237,8 +233,8 @@ To make the project GitHub-friendly, I created small subsets of the full dataset
 - products: ~150 rows
 - order_items: ~150 rows
 
-These subsets were randomly sampled from the project analysis dataset(~78,000 rows) to preserve the structure and relationships between tables while keeping file sizes manageable.
- 
+These subsets were randomly sampled from the project analysis dataset (~78,000 rows) to preserve the structure and relationships between tables while keeping file sizes manageable. The full Olist dataset (~600k+ rows) is available on [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+
 ## ERD Diagram & Database Schema
 
 - Customers → Orders → Order_Items → Products
