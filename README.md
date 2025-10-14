@@ -1,38 +1,26 @@
 # 📊 Customer Retention Analysis for E-Commerce  
-## _Turning First-Time Buyers into Loyal Customers Through Cohort & Retention Analysis_
+## 🎯 Excecutive Summary
+Using SQL & Tableau, I extracted E-Commerce data and created a customer cohort dashboard to track customer retention. After indentifying a low customer retention rate (5.6%) and average orders per customer rate (1.08%), I recommend that promotions/marketing team incorporate a few changes that will lead to higher customer retention conversion:
 
-## 🎯 Project Overview  
-_Using SQL & Tableau, I extracted customer data and created a customer cohort dashboard to track retention I found that only 5.6% of customers returned for another purchase and that each customer placed just 1.08 orders on average—a clear sign of untapped retention potential. Customer growth peaked in mid-2018, but newer cohorts showed weaker loyalty. These insights point to opportunities to improve customer lifetime value through targeted loyalty programs, personalized marketing, and stronger post-purchase engagement._
+ 1. __Personalized marketing__  
+ 2. __Stronger post-purchase engagement__ 
+ 3. __Improve customer lifetime value through targeted loyalty programs__
 
-## Business Analysis Questions
-This analysis was driven by the following business questions:
+## Business Problem
+E-commerce companies often focus heavily on acquiring new customers but struggle to retain them — leading to high churn and wasted acquisition costs. Olist, a large Brazilian online marketplace, faces a similar challenge: the majority of customers make only one purchase. The goal of the analysis is to answer the following for the business:
 
-- #1. 📈 _**New Customers per Month**_ - How many new customers are acquired each month?
-- #2. 🔁 _**Repeat Customers**_ - What percentage of customers make repeat purchases?
-- #3. 📊 _**Cohort Analysis**_ - For each month, how many customers return in subsequent months?
-- #4. 📦 _**Average Orders per Customer**_ - How many orders does an average customer place?
-- #5. 💰 _**Top Customers**_ - Who are the customers with the highest number of orders or total spend?
+ 1. 📈 _**New Customers per Month**_ - How many new customers are we acquiring each month?
+ 2. 🔁 _**Repeat Customers**_ - What percentage of our customers are making repeat purchases?
+ 3. 📊 _**Cohort Analysis**_ - For each month, how many customers are returning in subsequent months?
+ 4. 📦 _**Average Orders per Customer**_ - How many orders does an average customer place?
+ 5. 💰 _**Top Customers**_ - Which customers have the highest number of orders or total spending?
 
-These questions guided the data analysis and helped identify actionable insights for the e-commerce business.
 
-__Key highlights:__
 
-- Built relational tables (customers, orders, products, order_items) with primary and foreign key relationships.
-- Populated realistic data (full dataset ~78,000 rows) and created GitHub-friendly samples (~500–600 rows).
-- Tracked new and repeat customers, cohort retention trends, average orders per customer, and top customers by spending & orders.
-- Explored insights into ordering patterns, product sales, and inventory metrics.
 
-<img width="1100" height="325" alt="image" src="https://github.com/user-attachments/assets/202c3dd2-74e4-436a-8c24-8083542994a1" />
+<img width="1440" height="828" alt="Customer cohort Analysis SS" src="https://github.com/user-attachments/assets/e0d623ee-fa70-42c8-9811-db4810e08352" />
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Business Analysis Questions](#Business-Analysis-Questions)
-- [Queries](#Queries)
-- [Key Takeaways w/ Business Insights](#Key-Takeaways-w-Business-Insights)
-- [Sample Data Preview w/ ERD Diagram](#Sample-Data-Preview-w-ERD-Diagram)
-- [Technologies Used](#technologies-used)
-- [License](#license)
-- [Author Info](#author-info)
+
 
 ---
 ## Queries 
@@ -253,6 +241,13 @@ ERD Diagram
 - Data Visualization: Tableau
 - Random Name Generation: Python(faker)
 - Data Source: Brazilian E-Commerce Public Dataset by Olist
+
+__Key highlights:__
+
+- Built relational tables (customers, orders, products, order_items) with primary and foreign key relationships.
+- Populated realistic data (full dataset ~78,000 rows) and created GitHub-friendly samples (~500–600 rows).
+- Tracked new and repeat customers, cohort retention trends, average orders per customer, and top customers by spending & orders.
+- Explored insights into ordering patterns, product sales, and inventory metrics.
 
 ---
 ## License
