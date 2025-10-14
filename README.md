@@ -1,5 +1,5 @@
 # 📊 Customer Retention Analysis for E-Commerce  
-## 🎯 Excecutive Summary
+## 🎯 Executive Summary
 Using SQL & Tableau, I extracted E-Commerce data and created a customer cohort dashboard to track customer retention. After indentifying a low customer retention rate (5.6%) and average orders per customer rate (1.08%), I recommend that promotions/marketing team incorporate a few changes that will lead to higher customer retention conversion:
 
  1. __Personalized marketing__  
