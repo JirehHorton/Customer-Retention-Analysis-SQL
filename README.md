@@ -16,10 +16,7 @@ E-commerce companies often focus heavily on acquiring new customers but struggle
  5. 💰 _**Top Customers**_ - Which customers have the highest number of orders or total spending?
 
 
-
-
-<img width="1440" height="828" alt="Customer cohort Analysis SS" src="https://github.com/user-attachments/assets/e0d623ee-fa70-42c8-9811-db4810e08352" />
-
+<img width="1273" height="636" alt="Customer Cohort Dashboard" src="https://github.com/user-attachments/assets/8ed314bf-dd1b-4ced-adbf-fdd52f8c8178" />
 
 
 ---
